@@ -1,0 +1,52 @@
+// Script de viaje por los planetas en Stellarium
+core.debug("Iniciando el viaje por los planetas...");
+
+var planetas = [
+    ["Mercury", 91.80, 44.24, 7, "2061-05-31T01:04:47"],
+    ["Venus", 6.7, 40.3, 50000, "2093-12-17T12:04:47"],
+    ["Moon", 0.7, 0.0, 50, "2049-01-04T01:10:00"],
+    ["Mars", -175.399994, -14.48, 17, "2099-07-26T04:16:00"],
+    ["(1) Ceres", -179.71, 44.24, 17, "2082-10-19T21:08:21"],
+    ["Jupiter", 121.71, 27.24, 71492000, "2058-07-15T11:52:00"],
+    ["Saturn", -73.71, 9.24, 200000, "2031-09-16T10:48:57"],
+    ["Uranus", 57.73, 60.0, 30268000, "2052-06-16T11:00:00"],
+    ["Neptune", 94.71, 11.24, 24764000, "2035-07-17T15:00:00"],
+    ["Pluto", 38.49, 62.04, 76, "2000-09-01T12:35:49"],
+    ["Sedna", 1.49, 1.04, 76, "2073-09-28T06:44:16"],
+    ["Eris", 38.49, 31.04, 76, "2099-08-06T07:47:31"]
+];
+
+for (var i = 0; i < planetas.length; i++) {
+    var cuerpo = planetas[i][0];
+    var lon = planetas[i][1];
+    var lat = planetas[i][2];
+    var alt = planetas[i][3];
+    var fecha = planetas[i][4];
+
+    core.debug("Viajando a " + cuerpo);
+    
+    // Establecer la fecha
+    core.setDate(fecha, "utc");
+    
+    // Posicionar el observador
+    core.setObserverLocation(lon, lat, alt, 1, "", cuerpo);
+    
+    // Hacer zoom al planeta
+    StelMovementMgr.zoomTo(40, 2);
+    
+    // Esperar un momento para apreciar el planeta
+    core.wait(2);
+    
+    // Girar la vista hacia la Tierra
+    core.selectObjectByName("Earth", pointer = true);
+    StelMovementMgr.setFlagTracking(true);
+    
+    // Hacer zoom en la Tierra
+    StelMovementMgr.zoomTo(10, 2);
+    
+    // Esperar un poco antes del próximo viaje
+    core.wait(3);
+}
+
+core.debug("Viaje completado. Fin del recorrido.");
+

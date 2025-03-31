@@ -1,0 +1,45 @@
+core.clear("all");
+
+core.setObserverLocation(0, 0, 0, 0, "Deep Space");  // Simula que la vista es desde una nave
+core.setDate("2025-03-11T20:00:00");  // Fecha inicial del viaje
+core.setTimeRate(1);  // Velocidad normal del tiempo
+
+// Lista de estrellas principales de cada constelación zodiacal
+var destinations = [
+    ["Hamal", "Aries"],
+    ["Aldebaran", "Tauro"],
+    ["Pollux", "Géminis"],
+    ["Acubens", "Cáncer"],
+    ["Regulus", "Leo"],
+    ["Spica", "Virgo"],
+    ["Zubeneschamali", "Libra"],
+    ["Antares", "Escorpio"],
+    ["Kaus Australis", "Sagitario"],
+    ["Deneb Algedi", "Capricornio"],
+    ["Sadalsuud", "Acuario"],
+    ["Alrescha", "Piscis"]
+];
+
+for (var i = 0; i < destinations.length; i++) {
+    var star = destinations[i][0];
+    var constellation = destinations[i][1];
+
+    // Acercarse a la estrella principal de la constelación
+    core.debug("Viajando a " + constellation);
+    core.selectObject(star, true);
+    core.setFov(10);  // Acercar la vista
+    core.wait(4);  // Tiempo de observación en la constelación
+
+    // Retroceder al mapa general de constelaciones
+    core.setFov(90);  // Alejar la vista
+    core.wait(3);  // Mantener la vista alejada antes del siguiente salto
+}
+
+// Regresar a la Tierra
+core.debug("Regresando a la Tierra");
+core.selectObject("Earth", true);
+core.setFov(60);
+core.wait(3);
+
+core.debug("Viaje completado 🚀✨");
+

@@ -1,0 +1,121 @@
+
+// Name: Zodiac
+// Author: Matthew Gates
+// License: Public Domain
+// Version: 1.2
+// Description: This script displays the constellations of the Zodiac.
+//              That means the constellations which lie along the line which
+//              the Sun traces across the celestial sphere over the course 
+//              of a year.
+//
+
+var constellations = new Array("Aquarius", "Pisces", "Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpius", "Sagittarius", "Capricornus");
+
+var initial = {Planet: "Earth", Position: "Santurtzi", lon: 43, lat: -3};
+core.setSkyCulture("modern");
+core.clear("deepspace");
+core.wait(1);
+
+core.setDate("2006:03:14T21:21:32");
+core.moveToRaDec("17h 53m 0s", "66d 25m 0s");
+StelMovementMgr.zoomTo(210, 5);
+core.wait(5);
+
+ConstellationMgr.setFlagIsolateSelected(true);
+ConstellationMgr.setFlagArt(true);
+ConstellationMgr.setFlagLabels(true);
+ConstellationMgr.setArtIntensity(0.6);
+
+for(i=0; i<constellations.length; i++)
+{
+	core.selectObjectByName(constellations[i], false);
+	core.wait(0.6);
+}
+
+core.wait(1);
+ConstellationMgr.setFlagBoundaries(true);
+core.wait(1);
+GridLinesMgr.setFlagEclipticLine(true);
+
+var planetas = [
+    { nombre: "Venus", date:"2025-01-05T03:45:47", zConst: 26.9, zoom: 0.00764 ,lon: 6.7 , lat: 40.3 , alt: 50000 },
+    { nombre: "Mercury", date:"2025-03-12T23:59:47", zConst: 26.9, zoom: 0.00392 , lon: 91.8 , lat: 44.24 , alt: 7 },
+    { nombre: "Moon", date:"2025-10-14T08:56:00", zConst: 26.9, zoom: 0.00139 , lon: 0.7 , lat: 0 , alt: 50 },
+    { nombre: "Mars", date:"2026-06-30T11:22:00", zConst: 26.9, zoom: 0.00139 , lon: -175.399994 , lat: -14.48 , alt: 17 },
+    { nombre: "Io", date:"2025-12-18T09:48:00", zConst: 26.9, zoom: 0.00139 , lon: 0.7 , lat: 0 , alt: 50 },
+    { nombre: "Europa", date:"2025-12-19T17:17:00", zConst: 17.68, zoom: 0.253 , lon: 0.7 , lat: 0 , alt: 50 },
+    { nombre: "Saturn", date:"2035-07-02T11:42:57", zConst: 44.4, zoom: 0.00903 , lon: -73.71 , lat: 9.24 , alt: 200000 },
+    { nombre: "Titan", date:"2035-07-02T11:42:00", zConst: 61.9, zoom: 0.353 , lon: 0.7 , lat: 0 , alt: 50 },
+    { nombre: "Uranus", date:"2061-08-14T11:42:00", zConst: 22.8, zoom: 0.00139 , lon: 57.73 , lat: 60.0 , alt: 30268000 },
+    { nombre: "Neptune", date:"2123-07-13T13:51:00", zConst: 37.6, zoom: 0.00139 , lon: 94.71 , lat:11.24 , alt: 24764000 },
+    { nombre: "Jupiter", date:"2233-02-13T11:52:00", zConst: 52.4, zoom: 0.00171 , lon: 121.71 , lat: 27.24 , alt: 71492000 },
+    { nombre: "Earth", date:"2192-08-13T11:52:00", zConst: 30.6, zoom: 0.00139 , lon: 0.7 , lat: 0 , alt: 50 }
+];
+
+// Iniciar desde la Tierra
+
+core.setObserverLocation(initial.lon,initial.lat,4000,1,initial.Position,initial.Planet);
+
+txt1=""
+
+ConstellationMgr.setFlagLines(true);
+ConstellationMgr.setFlagLabels(true);
+GridLinesMgr.setFlagEclipticLine(true);
+//GridLinesMgr.setFlagEquatorLine(true);
+SolarSystem.setFlagPlanets(true);
+SolarSystem.setFlagOrbits(true);
+SolarSystem.setFlagPointer(true);
+SolarSystem.setFlagLabels(true);
+
+function message(txt) {
+    LabelMgr.setLabelShow(txt1, false);
+    if (txt != "") {
+        txt1 = LabelMgr.labelScreen(txt, 470, 120, false, 35, "#FF0000");
+        LabelMgr.setLabelShow(txt1, true);
+    }
+}
+
+// Función para viajar suavemente a un planeta
+function viajarA(inx) {
+
+    core.setDate(planetas[inx].date,"utc");
+    message("Buscando planeta " + planetas[inx].nombre );
+    StelMovementMgr.zoomTo(200,1);
+    core.wait(3);
+    core.selectObjectByName(planetas[inx].nombre, pointer = true);
+    StelMovementMgr.setFlagTracking(true);
+    core.wait(3); // Mantener la vista por 3 segundos
+    message("");
+    StelMovementMgr.zoomTo(planetas[inx].zConst, 10); // Acercamiento suave en 5 segundos
+    core.wait(13); // Mantener la vista por 3 segundos
+    StelMovementMgr.zoomTo(planetas[inx].zoom, 5); // Acercamiento suave en 5 segundos
+    core.wait(8); // Mantener la vista por 3 segundos
+
+    message("Aterrizando en planeta " + planetas[inx].nombre);
+
+    core.setObserverLocation(planetas[inx].lon, planetas[inx].lat, planetas[inx].alt,1,"",planetas[inx].nombre);
+    core.wait(3); // Mantener la vista por 3 segundos
+
+    message("Abriendo zoom en planeta " + planetas[inx].nombre);
+
+    StelMovementMgr.zoomTo(83,3);
+    core.wait(5); // Mantener la vista por 3 segundos
+
+}
+
+message("Iniciando Viaje desde la Tierra" + planetas[0].date);
+core.setDate(planetas[0].date, "utc");
+core.wait(5); // Mantener la vista por 3 segundos
+
+// Recorrer cada planeta en orden
+for (var i = 0; i < planetas.length; i++) {
+    viajarA(i);
+}
+
+// Fin del viaje en Tierra
+core.selectObjectByName("Sun", pointer = true);
+// StelMovementMgr.zoomOut(true);
+StelMovementMgr.zoomTo(50,1);
+StelMovementMgr.setFlagTracking(true);
+core.wait(5);
+

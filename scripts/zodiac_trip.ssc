@@ -1,0 +1,39 @@
+core.clear("all");
+
+core.setObserverLocation(0, 0, 0, 0, "Deep Space");  // Simula que la vista es desde una nave
+core.setDate("2025-03-11T20:00:00");  // Fecha inicial del viaje
+core.setTimeRate(1);  // Velocidad normal del tiempo
+
+// Lista de destinos (estrella principal de cada constelación)
+var destinations = [
+    "Hamal",      // Aries
+    "Aldebaran",  // Tauro
+    "Pollux",     // Géminis
+    "Acubens",    // Cáncer
+    "Regulus",    // Leo
+    "Spica",      // Virgo
+    "Zubeneschamali", // Libra
+    "Antares",    // Escorpio
+    "Kaus Australis", // Sagitario
+    "Deneb Algedi", // Capricornio
+    "Sadalsuud",  // Acuario
+    "Alrescha"    // Piscis
+];
+
+// Recorre cada destino con una pausa entre cada uno
+for (var i = 0; i < destinations.length; i++) {
+    core.selectObject(destinations[i], true);
+    core.setTimeRate(5000);  // Acelera el tiempo para simular el viaje
+    core.wait(2);  // Pausa de 2 segundos entre saltos
+    core.setTimeRate(1);  // Vuelve a velocidad normal
+    core.wait(3);  // Permite observar la estrella antes del siguiente salto
+}
+
+// Regresa a la Tierra al final
+core.selectObject("Earth", true);
+core.setTimeRate(5000);
+core.wait(3);
+core.setTimeRate(1);
+
+core.debug("Viaje completo 🚀✨");
+

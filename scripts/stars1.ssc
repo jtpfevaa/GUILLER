@@ -1,0 +1,241 @@
+
+// Name: Zodiac
+// Author: Matthew Gates
+// License: Public Domain
+// Version: 1.2
+// Description: This script displays the constellations of the Zodiac.
+//              That means the constellations which lie along the line which
+//              the Sun traces across the celestial sphere over the course 
+//              of a year.
+//
+
+var constellations = new Array("Aquarius", "Pisces", "Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpius", "Sagittarius", "Capricornus");
+
+var initial = {Planet: "Earth", Position: "Santurtzi", lon: 43, lat: -3};
+core.setSkyCulture("modern");
+core.clear("deepspace");
+core.wait(1);
+
+core.setDate("2006:03:14T21:21:32");
+core.moveToRaDec("17h 53m 0s", "66d 25m 0s");
+StelMovementMgr.zoomTo(210, 5);
+core.wait(5);
+
+ConstellationMgr.setFlagIsolateSelected(true);
+ConstellationMgr.setFlagArt(true);
+ConstellationMgr.setFlagLabels(true);
+ConstellationMgr.setArtIntensity(0.6);
+
+var waitInterConst = 0.6;
+for(i=0; i<constellations.length; i++)
+{
+	core.selectObjectByName(constellations[i], false);
+	core.wait(waitInterConst);
+}
+
+core.wait(1);
+ConstellationMgr.setFlagBoundaries(true);
+core.wait(1);
+GridLinesMgr.setFlagEclipticLine(true);
+
+var starsAq= [
+	{ name: "NGC 7252" , time: 3.0 , zoom: 0.00139 , comm: "Colisión de Galaxias. Atomos para la paz"},
+	{ name: "NGC 7606" , time: 3.0 , zoom: 0.00139, comm: "Agujero negro"},
+	{ name: "NGC 7009" , time: 3.0 , zoom: 0.02 , comm: "Enana blanca similar al sol"},
+	{ name: "NGC 7293" , time: 3.0 , zoom: 0.474 , comm: "Hélice. EL OJO DE DIOS"},
+	{ name: "Skat" , time: 3.0 , zoom: 0.662 , comm: "DELTA AQUARIDA"}
+];
+
+var starsTau = [
+	{ name: "M 45" , time: 3.0 , zoom: 2.51 , comm: "El corazón del toro. LAS PLEYADES"},
+	{ name: "Mel 25" , time: 3.0 , zoom: 6.83 , comm: "La cara del toro. LAS HIADES"},
+	{ name: "M 1" , time: 3.0 , zoom: 0.106 , comm: "El cuerno del toro. NEBULOSA DEL CANGREJO"},
+	{ name: "NGC 1514" , time: 3.0 , zoom: 0.148 , comm: "NEBULOSA BOLA de CRISTAL"}
+];
+
+var starsPi= [
+	{ name: "M74" , time: 3.0 , zoom: 0.174 , comm: "GALAXIA ESPIRAL"},
+	{ name: "NGC 7714" , time: 3.0 , zoom: 0.0667 , comm: "Colisión entre galaxias"},
+	{ name: "NGC 474" , time: 3.0 , zoom: 0.0688 , comm: "Anillos concentricos de materia"},
+	{ name: "NGC 520" , time: 3.0 , zoom: 0.13 , comm: "Colisión de una Galaxia"},
+	{ name: "NGC 660" , time: 3.0 , zoom: 0.0565 , comm: "Galaxia LENTICULAR"},
+	{ name: "Andromeda A" , time: 3.0 , zoom: 2.61 , comm: "Colisión con la VIA LACTEA"}
+];
+
+var starsAr= [
+	{ name: "NGC 1156" , time: 3.0 , zoom: 0.00139 , comm: "Galaxia enana irregular"},
+	{ name: "NGC 972" , time: 3.0 , zoom: 0.139 , comm: "Cerca de Musca Borealis"},
+	{ name: "NGC 678" , time: 3.0 , zoom: 0.288 , comm: "Grupo de galaxias curiosas"},
+	{ name: "ARP 276" , time: 3.0 , zoom: 0.106 , comm: "Galaxias en Interacción"}
+];
+
+var starsGem = [
+	{ name: "Pollux" , time: 3.0 , zoom: 0.11 , comm: "Estrella gigante naranja. Ojo de Pollux"},
+	{ name: "Castor" , time: 3.0 , zoom: 0.05 , comm: "Sistema estelar compuesto con estrellas binarias"},
+	{ name: "IC 443" , time: 3.0 , zoom: 1.29 , comm: "NEBULOSA de la MEDUSA. Talón de Cástor"},
+	{ name: "NGC 2392" , time: 3.0 , zoom: 0.02 , comm: "NEBULOSA ESQUIMAL. Enana blanca caliente y luminosa"}
+];
+
+var starsCan = [
+	{ name: "M 44" , time: 3.0 , zoom: 1.13 , comm: "Cúmulo del PESEBRE"},
+	{ name: "M 67" , time: 3.0 , zoom: 0.688 , comm: "Cúmulo PAC-MAN. Más de 500 estrellas juntas"}
+];
+
+var starsLeo = [
+	{ name: "HIP 55262" , time: 3.0 , zoom: 1.13 , comm: "Triplete de LEO. M65, M66 y NGC 3628"},
+	{ name: "M 65" , time: 3.0 , zoom: 0.13 , comm: "Galaxia espiral con brazos espirales enrollados"},
+	{ name: "M 66" , time: 3.0 , zoom: 0.13 , comm: "Explosiones de supernovas recientemente"},
+	{ name: "NGC 3628" , time: 3.0 , zoom: 0.154 , comm: "Galaxia HAMBURGUESA con cola de marea"},
+	{ name: "72 Leo" , time: 3.0 , zoom: 0.11 , comm: "Estrella gigante roja . Crucifijo de DIOS"}
+];
+
+var starsVir = [
+	{ name: "M 58" , time: 3.0 , zoom: 0.13 , comm: "Galaxia espiral tipo SBc perteneciente al CÚMULO de VIRGO"},
+	{ name: "M 60" , time: 3.0 , zoom: 0.13 , comm: "Galaxia elíptica perteneciente al CÚMULO de VIRGO"},
+	{ name: "M 61" , time: 3.0 , zoom: 0.0931 , comm: "Galaxia espiral barrada en el corazón de VIRGO"},
+	{ name: "M 90" , time: 3.0 , zoom: 0.253 , comm: "Galaxia errante hacia la VIA LACTEA"}
+];
+
+var starsLib = [
+	{ name: "NGC 5897" , time: 3.0 , zoom: 0.299 , comm: "Cúmulo GLOBULAR. Satélite de la Via Láctea"},
+	{ name: "NGC 5728" , time: 3.0 , zoom: 0.0404 , comm: "Galaxia SEYFERT. Núcleo extremadamente luminoso. Emite energía de Agujeros Negros."},
+	{ name: "NGC 5793" , time: 3.0 , zoom: 0.244 , comm: "Másares y Mega-Másares con agujeros negros miles de millones la masa del Sol"}
+];
+
+var starsSco = [
+	{ name: "NGC 6302" , time: 3.0 , zoom: 0.0543 , comm: "Nebulosa MARIPOSA"},
+	{ name: "NGC 6334" , time: 3.0 , zoom: 1.52 , comm: "Nebulosa ZARPA de GATO. Hidrocarburos aromáticos policíclicos"},
+	{ name: "NGC 6357" , time: 3.0 , zoom: 1.09 , comm: "Nebulosa LANGOSTA. Cúmulo de cúmulos con hidrogeno HII Ionizado"} ,
+	{ name: "Antares" , time: 3.0 , zoom: 2.97 , comm: "Supergigante ROJA próxima a explotar en una brillante supernova"},
+];
+
+var starsSag = [
+	{ name: "M 20" , time: 3.0 , zoom: 0.474 , comm: "Mezcla de nebulosas de emisión, reflexión y oscura"},
+	{ name: "M 22" , time: 3.0 , zoom: 0.34 , comm: "Gran cúmulo de Sagitario"},
+	{ name: "M 24" , time: 3.0 , zoom: 3.5 , comm: "Pequeña nube de Sagitario a través de ventana estelar"},
+	{ name: "NGC 6537" , time: 3.0 , zoom: 0.046 , comm: "Nebulosa bipolar de la ARAÑA ROJA."},
+	{ name: "MR 80" , time: 3.0 , zoom: 1.8 , comm: "Supernova de la MUERTE. Flecha de rayos gamma que apunta a la Tierra"}
+];
+
+var starsCap = [
+	{ name: "NGC 6907" , time: 3.0 , zoom: 1.13 , comm: "Galaxias que se superponen"},
+	{ name: "M 30" , time: 3.0 , zoom: 0.244 , comm: "Cúmulo globular MEDUSA. procesos de lifting y striptease"}
+];
+
+// Iniciar desde la Tierra
+var planetas = [
+    { nombre: "Venus", date:"2025-01-05T03:45:47", zConst: 30.8, zoom: 0.00764 ,lon: 6.7 , lat: 40.3 , alt: 50000 , stars: starsAq , rot = 3600 * 24 },
+    { nombre: "Mercury", date:"2025-03-12T23:59:47", zConst: 26.9, zoom: 0.00392 , lon: 91.8 , lat: 44.24 , alt: 7 ,stars: starsPi , rot = 3600 * 24 },
+    { nombre: "Moon", date:"2025-10-14T08:56:00", zConst: 26.9, zoom: 0.00139 , lon: 0.7 , lat: 0 , alt: 50 , stars: starsAr , rot = 3600 * 24 },
+    { nombre: "Mars", date:"2026-06-30T11:22:00", zConst: 26.9, zoom: 0.00139 , lon: -175.399994 , lat: -14.48 , alt: 17 , stars: starsTau , rot = 3600},
+    { nombre: "Io", date:"2025-12-18T09:48:00", zConst: 26.9, zoom: 0.00139 , lon: 0.7 , lat: 0 , alt: 50 , stars: starsGem , rot = 3600},
+    { nombre: "Europa", date:"2025-12-19T17:17:00", zConst: 17.68, zoom: 0.253 , lon: 0.7 , lat: 0 , alt: 50 , stars: starsCan , rot = 60},
+    { nombre: "Saturn", date:"2035-07-02T11:42:57", zConst: 44.4, zoom: 0.00903 , lon: -73.71 , lat: 9.24 , alt: 200000 , stars: starsLeo , rot = 3600},
+    { nombre: "Titan", date:"2035-07-02T11:42:00", zConst: 61.9, zoom: 0.353 , lon: 0.7 , lat: 0 , alt: 50 , stars: starsVir , rot = 3600},
+    { nombre: "Uranus", date:"2061-08-14T11:42:00", zConst: 22.8, zoom: 0.00139 , lon: 57.73 , lat: 60.0 , alt: 30268000 , stars: starsLib , rot = 3600},
+    { nombre: "Neptune", date:"2123-07-13T13:51:00", zConst: 37.6, zoom: 0.00139 , lon: 94.71 , lat:11.24 , alt: 24764000 , stars: starsSco , rot = 3600},
+    { nombre: "Jupiter", date:"2233-02-13T11:52:00", zConst: 52.4, zoom: 0.00171 , lon: 121.71 , lat: 27.24 , alt: 71492000 , stars: starsSag , rot = 3600},
+    { nombre: "Earth", date:"2192-08-13T11:52:00", zConst: 30.6, zoom: 0.00139 , lon: 0.7 , lat: 0 , alt: 50 , stars: starsCap , rot = 3600}
+];
+
+
+core.setObserverLocation(initial.lon,initial.lat,4000,1,initial.Position,initial.Planet);
+
+txt1="";
+
+ConstellationMgr.setFlagLines(true);
+ConstellationMgr.setFlagLabels(true);
+GridLinesMgr.setFlagEclipticLine(true);
+//GridLinesMgr.setFlagEquatorLine(true);
+SolarSystem.setFlagPlanets(true);
+SolarSystem.setFlagOrbits(true);
+SolarSystem.setFlagPointer(true);
+SolarSystem.setFlagLabels(true);
+
+function message(txt) {
+    LabelMgr.setLabelShow(txt1, false);
+    if (txt != "") {
+        txt1 = LabelMgr.labelScreen(txt, 470, 120, false, 35, "#FF0000");
+        LabelMgr.setLabelShow(txt1, true);
+    }
+}
+
+function planetRotation(secs , rate = 1.0 )
+{
+	core.setTimeRate(rate);
+	core.wait(secs);
+	core.setTimeRate(1.0);
+	
+}
+
+function zoomToObject(name , zoom , time = 10 , wait = 3, msg)
+{
+    core.selectObjectByName(name , pointer = true);
+    StelMovementMgr.setFlagTracking(true);
+    StelMovementMgr.zoomTo(zoom , time); // Acercamiento suave en 5 segundos
+    core.wait(time); // Esperar 10 segundos
+    if(msg) {
+    	message(name + ": " + msg);
+    }
+    core.wait(wait); // Mantener la vista por 3 segundos
+    if(msg) {
+    	message("");
+    }
+}
+
+function visitConst(planet)
+{
+	if(planet.stars != null ) {
+	var stars = planet.stars;
+		for (var j = 0; j < stars.length; j++) {
+			zoomToObject( stars[j].name , stars[j].zoom , 5 ,
+			  stars[j].time , stars[j].comm);
+			StelMovementMgr.zoomTo(planet.zConst , 5); // Alejamiento suave en 5 segundos
+			core.wait(5);
+		}
+	}
+}
+
+// Función para viajar suavemente a un planeta
+function viajarA(inx) {
+
+    core.setDate(planetas[inx].date,"utc");
+    message("Buscando objeto " + planetas[inx].nombre );
+    StelMovementMgr.zoomTo(200,1);
+    zoomToObject( planetas[inx].nombre , planetas[inx].zConst , 10 , 5, "VISITAR la constelación de " + constellations[inx]);
+
+    visitConst(planetas[inx]);
+
+    zoomToObject(planetas[inx].nombre, planetas[inx].zConst , 5 , 4 , "VISITANDO planeta " + planetas[inx].nombre);
+    StelMovementMgr.zoomTo(planetas[inx].zoom, 5); // Acercamiento suave en 5 segundos
+    core.wait(5); // Mantener la vista por 3 segundos
+    planetRotation(10,planetas[inx].rot);
+
+    message("Aterrizando en planeta " + planetas[inx].nombre);
+    core.wait(8); // Mantener la vista por 3 segundos
+
+    core.setObserverLocation(planetas[inx].lon, planetas[inx].lat, planetas[inx].alt,10,"",planetas[inx].nombre);
+    core.wait(15); // Mantener la vista por 3 segundos
+
+    message("Abriendo zoom en planeta " + planetas[inx].nombre);
+
+    StelMovementMgr.zoomTo(83,3);
+    core.wait(5); // Mantener la vista por 3 segundos
+
+}
+
+message("Iniciando Viaje desde la Tierra" + planetas[0].date);
+core.setDate(planetas[0].date, "utc");
+core.wait(5); // Mantener la vista por 3 segundos
+
+// Recorrer cada planeta en orden
+for (var i = 0; i < planetas.length; i++) {
+    viajarA(i);
+}
+
+// Fin del viaje en Tierra
+core.selectObjectByName("Sun", pointer = true);
+// StelMovementMgr.zoomOut(true);
+StelMovementMgr.zoomTo(50,1);
+StelMovementMgr.setFlagTracking(true);
+core.wait(5);

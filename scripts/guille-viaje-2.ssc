@@ -1,0 +1,63 @@
+// Viaje por los planetas con paso cercano (8× diámetro de cada planeta)
+var planetas = [
+    { nombre: "Mercury", date:"2061-05-31T01:04:47", zoom: 0.00374 , lon: 91.8 , lat: 44.24 , alt: 7 },
+    { nombre: "Venus", date:"2093-12-17T12:04:47", zoom: 0.0149 ,lon: 6.7 , lat: 40.3 , alt: 50000 },
+    { nombre: "Moon", date:"2049-01-04T01:10:00", zoom: 0.00238 , lon: 0.7 , lat: 0 , alt: 50 },
+    { nombre: "Earth", date:"2049-01-04T01:10:00", zoom: 2.21 , lon: 0.7 , lat: 0 , alt: 50 },
+    { nombre: "Mars", date:"2099-07-26T04:16:00", zoom: 0.00202 , lon: -175.399994 , lat: -14.48 , alt: 17 },
+    { nombre: "Jupiter", date:"2058-07-15T11:52:00", zoom: 0.00764 , lon: 121.71 , lat: 27.24 , alt: 71492000 },
+    { nombre: "Saturn", date:"2031-09-16T10:48:57", zoom: 0.00139 , lon: -73.71 , lat: 9.24 , alt: 200000 },
+    { nombre: "Uranus", date:"2052-06-16T11:00:00", zoom: 0.00139 , lon: 57.73 , lat: 60.0 , alt: 30268000 },
+    { nombre: "Neptune", date:"2035-07-17T15:00:00", zoom: 0.00139 , lon: 94.71 , lat:11.24 , alt: 24764000 },
+    { nombre: "Caronte", date:"2000-09-01T12:35:49", zoom: 0.00139 , lon: 38.49 , lat: 62.04 , alt: 76 },
+    { nombre: "Pluto", date:"2000-09-01T12:35:49", zoom: 0.00139 , lon: 38.49 , lat: 62.04 , alt: 76 },
+    { nombre: "Earth", date:"2049-01-04T01:10:00", zoom: 0.00139 , lon: 0.7 , lat: 0 , alt: 50 }
+];
+
+// Iniciar desde la Tierra
+core.selectObjectByName("Earth");
+core.setObserverLocation(planetas[3].lon, planetas[3].lat, planetas[3].alt,1,"",planetas[3].nombre);
+ConstellationMgr.setFlagLines(true);
+ConstellationMgr.setFlagLabels(true);
+GridLinesMgr.setFlagEclipticLine(true);
+GridLinesMgr.setFlagEquatorLine(true);
+
+txt1 = LabelMgr.labelScreen("Iniciando Viaje desde la Tierra ", 470, 120, false, 35, "#FF0000");
+LabelMgr.setLabelShow(txt1, true);
+
+StelMovementMgr.zoomTo(50,1);
+core.wait(3);
+
+// Función para viajar suavemente a un planeta
+function viajarA(inx) {
+    LabelMgr.setLabelShow(txt1, false);
+    txt1 = LabelMgr.labelScreen("Buscando planeta " + planetas[inx].nombre, 470, 120, false, 35, "#FF0000");
+    LabelMgr.setLabelShow(txt1, true);
+    core.setDate(planetas[inx].date,"utc");
+    core.selectObjectByName(planetas[inx].nombre, pointer = true);
+    StelMovementMgr.setFlagTracking(true);
+    core.wait(3); // Mantener la vista por 3 segundos
+    LabelMgr.setLabelShow(txt1, false);
+    StelMovementMgr.zoomTo(planetas[inx].zoom, 20); // Acercamiento suave en 5 segundos
+    core.wait(30); // Mantener la vista por 3 segundos
+    core.setObserverLocation(planetas[inx].lon, planetas[inx].lat, planetas[inx].alt,1,"",planetas[inx].nombre);
+    txt1 = LabelMgr.labelScreen("Aterrizando en planeta " + planetas[inx].nombre, 470, 120, false, 35, "#FF0000");
+    LabelMgr.setLabelShow(txt1, true);
+//    StelMovementMgr.zoomOut(true); // Alejamiento
+    StelMovementMgr.zoomTo(50,1);
+    core.wait(8); // Mantener la vista por 3 segundos
+
+
+}
+
+// Recorrer cada planeta en orden
+for (var i = 0; i < planetas.length; i++) {
+    viajarA(i);
+}
+
+// Fin del viaje en Neptuno
+core.selectObjectByName("Mars", pointer = true);
+// StelMovementMgr.zoomOut(true);
+StelMovementMgr.zoomTo(50,1);
+core.wait(5);
+

@@ -1,0 +1,28 @@
+// Viaje a través de los planetas del sistema solar en Stellarium
+
+// Lista de planetas en orden de visita
+var planetas = ["Mercury", "Venus", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"];
+
+// Configurar el inicio desde la Tierra
+core.selectObjectByName("Earth");
+core.wait(2);
+StelMovementMgr.zoomTo(10, 2); // Acercarse a la Tierra
+core.wait(3); // Observar la Tierra
+
+// Función para viajar a un planeta
+function viajarA(planet, zoom) {
+    core.selectObjectByName(planet);
+    StelMovementMgr.zoomTo(zoom, 5); // Zoom progresivo en 5 segundos
+    core.wait(3); // Mantener la vista por 3 segundos
+}
+
+// Recorrer cada planeta de la lista
+for (var i = 0; i < planetas.length; i++) {
+    viajarA(planetas[i], 20); // Zoom al planeta actual
+}
+
+// Fin del viaje
+core.selectObjectByName("Neptune");
+StelMovementMgr.zoomTo(5, 5); // Último zoom
+core.wait(5);
+
