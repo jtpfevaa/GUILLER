@@ -10,13 +10,13 @@
 //
 
 include("status_label.inc");
-include("../textures/img/sizeImg.js");
+include("../textures/img/photos/sizeImg.js");
 
 LabelMgr.deleteAllLabels();
 
 useStatusLabel("MENSAJE: ", 50, core.getScreenHeight() - 50, 16, "#ff0000");
 
-var imgPath = "../textures/img/";
+var imgPath = "../textures/img/photos/";
 var constellations = new Array("Aquarius", "Pisces", "Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpius", "Sagittarius", "Capricornus");
 
 var initial = {Planet: "Earth", Position: "Santurtzi", lon: 43, lat: -3};
@@ -34,6 +34,9 @@ ConstellationMgr.setFlagArt(true);
 ConstellationMgr.setFlagLabels(true);
 ConstellationMgr.setArtIntensity(0.6);
 
+var saltar = true;
+
+if(!saltar) {			//saltar bloque
 var waitInterConst = 0.6;
 for(i=0; i<constellations.length; i++)
 {
@@ -41,93 +44,95 @@ for(i=0; i<constellations.length; i++)
 	core.wait(waitInterConst);
 }
 
+}		// Fin salto
+
 core.wait(1);
 ConstellationMgr.setFlagBoundaries(true);
 core.wait(1);
 GridLinesMgr.setFlagEclipticLine(true);
 
 var starsAq= [
-	{ name: "NGC 7252" , time: 3.0 , zoom: 0.00139 , comm: "Colisión de Galaxias. Atomos para la paz" , img: "Skat.png"},
-	{ name: "NGC 7606" , time: 3.0 , zoom: 0.00139, comm: "Agujero negro", img: "estrella.png"},
+	{ name: "NGC 7252" , time: 3.0 , zoom: 0.02 , comm: "Colisión de Galaxias. Atomos para la paz" , img: "Skat.jpg"},
+	{ name: "NGC 7606" , time: 3.0 , zoom: 0.02 , comm: "Agujero negro", img: "marco.png"},
 	{ name: "NGC 7009" , time: 3.0 , zoom: 0.02 , comm: "Enana blanca similar al sol" , img: "NGC7009.jpg"},
 	{ name: "NGC 7293" , time: 3.0 , zoom: 0.474 , comm: "Hélice. EL OJO DE DIOS" , img: "NGC7293.jpg"},
 	{ name: "Skat" , time: 3.0 , zoom: 0.662 , comm: "DELTA AQUARIDA", img: "Skat.jpg"}
 ];
 
 var starsTau = [
-	{ name: "M 45" , time: 3.0 , zoom: 2.51 , comm: "El corazón del toro. LAS PLEYADES", img: "estrella.png"},
-	{ name: "Mel 25" , time: 3.0 , zoom: 6.83 , comm: "La cara del toro. LAS HIADES", img: "estrella.png"},
-	{ name: "M 1" , time: 3.0 , zoom: 0.106 , comm: "El cuerno del toro. NEBULOSA DEL CANGREJO", img: "estrella.png"},
-	{ name: "NGC 1514" , time: 3.0 , zoom: 0.148 , comm: "NEBULOSA BOLA de CRISTAL", img: "estrella.png"}
+	{ name: "M 45" , time: 3.0 , zoom: 2.51 , comm: "El corazón del toro. LAS PLEYADES", img: "marco.png"},
+	{ name: "Mel 25" , time: 3.0 , zoom: 6.83 , comm: "La cara del toro. LAS HIADES", img: "marco.png"},
+	{ name: "M 1" , time: 3.0 , zoom: 0.106 , comm: "El cuerno del toro. NEBULOSA DEL CANGREJO", img: "marco.png"},
+	{ name: "NGC 1514" , time: 3.0 , zoom: 0.148 , comm: "NEBULOSA BOLA de CRISTAL", img: "marco.png"}
 ];
 
 var starsPi= [
-	{ name: "M74" , time: 3.0 , zoom: 0.174 , comm: "GALAXIA ESPIRAL", img: "estrella.png"},
-	{ name: "NGC 7714" , time: 3.0 , zoom: 0.0667 , comm: "Colisión entre galaxias", img: "estrella.png"},
-	{ name: "NGC 474" , time: 3.0 , zoom: 0.0688 , comm: "Anillos concentricos de materia", img: "estrella.png"},
-	{ name: "NGC 520" , time: 3.0 , zoom: 0.13 , comm: "Colisión de una Galaxia", img: "estrella.png"},
-	{ name: "NGC 660" , time: 3.0 , zoom: 0.0565 , comm: "Galaxia LENTICULAR", img: "estrella.png"},
-	{ name: "Andromeda A" , time: 3.0 , zoom: 2.61 , comm: "Colisión con la VIA LACTEA", img: "estrella.png"}
+	{ name: "M74" , time: 3.0 , zoom: 0.174 , comm: "GALAXIA ESPIRAL", img: "marco.png"},
+	{ name: "NGC 7714" , time: 3.0 , zoom: 0.0667 , comm: "Colisión entre galaxias", img: "marco.png"},
+	{ name: "NGC 474" , time: 3.0 , zoom: 0.0688 , comm: "Anillos concentricos de materia", img: "marco.png"},
+	{ name: "NGC 520" , time: 3.0 , zoom: 0.13 , comm: "Colisión de una Galaxia", img: "marco.png"},
+	{ name: "NGC 660" , time: 3.0 , zoom: 0.0565 , comm: "Galaxia LENTICULAR", img: "marco.png"},
+	{ name: "Andromeda A" , time: 3.0 , zoom: 2.61 , comm: "Colisión con la VIA LACTEA", img: "marco.png"}
 ];
 
 var starsAr= [
-	{ name: "NGC 1156" , time: 3.0 , zoom: 0.00139 , comm: "Galaxia enana irregular", img: "estrella.png"},
-	{ name: "NGC 972" , time: 3.0 , zoom: 0.139 , comm: "Cerca de Musca Borealis", img: "estrella.png"},
-	{ name: "NGC 678" , time: 3.0 , zoom: 0.288 , comm: "Grupo de galaxias curiosas", img: "estrella.png"},
-	{ name: "ARP 276" , time: 3.0 , zoom: 0.106 , comm: "Galaxias en Interacción", img: "estrella.png"}
+	{ name: "NGC 1156" , time: 3.0 , zoom: 0.00139 , comm: "Galaxia enana irregular", img: "marco.png"},
+	{ name: "NGC 972" , time: 3.0 , zoom: 0.139 , comm: "Cerca de Musca Borealis", img: "marco.png"},
+	{ name: "NGC 678" , time: 3.0 , zoom: 0.288 , comm: "Grupo de galaxias curiosas", img: "marco.png"},
+	{ name: "ARP 276" , time: 3.0 , zoom: 0.106 , comm: "Galaxias en Interacción", img: "marco.png"}
 ];
 
 var starsGem = [
-	{ name: "Pollux" , time: 3.0 , zoom: 0.11 , comm: "Estrella gigante naranja. Ojo de Pollux", img: "estrella.png"},
-	{ name: "Castor" , time: 3.0 , zoom: 0.05 , comm: "Sistema estelar compuesto con estrellas binarias", img: "estrella.png"},
-	{ name: "IC 443" , time: 3.0 , zoom: 1.29 , comm: "NEBULOSA de la MEDUSA. Talón de Cástor", img: "estrella.png"},
-	{ name: "NGC 2392" , time: 3.0 , zoom: 0.02 , comm: "NEBULOSA ESQUIMAL. Enana blanca caliente y luminosa", img: "estrella.png"}
+	{ name: "Pollux" , time: 3.0 , zoom: 0.11 , comm: "Estrella gigante naranja. Ojo de Pollux", img: "marco.png"},
+	{ name: "Castor" , time: 3.0 , zoom: 0.05 , comm: "Sistema estelar compuesto con estrellas binarias", img: "marco.png"},
+	{ name: "IC 443" , time: 3.0 , zoom: 1.29 , comm: "NEBULOSA de la MEDUSA. Talón de Cástor", img: "marco.png"},
+	{ name: "NGC 2392" , time: 3.0 , zoom: 0.02 , comm: "NEBULOSA ESQUIMAL. Enana blanca caliente y luminosa", img: "marco.png"}
 ];
 
 var starsCan = [
-	{ name: "M 44" , time: 3.0 , zoom: 1.13 , comm: "Cúmulo del PESEBRE", img: "estrella.png"},
-	{ name: "M 67" , time: 3.0 , zoom: 0.688 , comm: "Cúmulo PAC-MAN. Más de 500 estrellas juntas", img: "estrella.png"}
+	{ name: "M 44" , time: 3.0 , zoom: 1.13 , comm: "Cúmulo del PESEBRE", img: "marco.png"},
+	{ name: "M 67" , time: 3.0 , zoom: 0.688 , comm: "Cúmulo PAC-MAN. Más de 500 estrellas juntas", img: "marco.png"}
 ];
 
 var starsLeo = [
-	{ name: "HIP 55262" , time: 3.0 , zoom: 1.13 , comm: "Triplete de LEO. M65, M66 y NGC 3628", img: "estrella.png"},
-	{ name: "M 65" , time: 3.0 , zoom: 0.13 , comm: "Galaxia espiral con brazos espirales enrollados", img: "estrella.png"},
-	{ name: "M 66" , time: 3.0 , zoom: 0.13 , comm: "Explosiones de supernovas recientemente", img: "estrella.png"},
-	{ name: "NGC 3628" , time: 3.0 , zoom: 0.154 , comm: "Galaxia HAMBURGUESA con cola de marea", img: "estrella.png" },
-	{ name: "72 Leo" , time: 3.0 , zoom: 0.11 , comm: "Estrella gigante roja . Crucifijo de DIOS", img: "estrella.png"}
+	{ name: "HIP 55262" , time: 3.0 , zoom: 1.13 , comm: "Triplete de LEO. M65, M66 y NGC 3628", img: "marco.png"},
+	{ name: "M 65" , time: 3.0 , zoom: 0.13 , comm: "Galaxia espiral con brazos espirales enrollados", img: "marco.png"},
+	{ name: "M 66" , time: 3.0 , zoom: 0.13 , comm: "Explosiones de supernovas recientemente", img: "marco.png"},
+	{ name: "NGC 3628" , time: 3.0 , zoom: 0.154 , comm: "Galaxia HAMBURGUESA con cola de marea", img: "marco.png" },
+	{ name: "72 Leo" , time: 3.0 , zoom: 0.11 , comm: "Estrella gigante roja . Crucifijo de DIOS", img: "marco.png"}
 ];
 
 var starsVir = [
-	{ name: "M 58" , time: 3.0 , zoom: 0.13 , comm: "Galaxia espiral tipo SBc perteneciente al CÚMULO de VIRGO", img: "estrella.png"},
-	{ name: "M 60" , time: 3.0 , zoom: 0.13 , comm: "Galaxia elíptica perteneciente al CÚMULO de VIRGO", img: "estrella.png"},
-	{ name: "M 61" , time: 3.0 , zoom: 0.0931 , comm: "Galaxia espiral barrada en el corazón de VIRGO", img: "estrella.png"},
-	{ name: "M 90" , time: 3.0 , zoom: 0.253 , comm: "Galaxia errante hacia la VIA LACTEA", img: "estrella.png"}
+	{ name: "M 58" , time: 3.0 , zoom: 0.13 , comm: "Galaxia espiral tipo SBc perteneciente al CÚMULO de VIRGO", img: "marco.png"},
+	{ name: "M 60" , time: 3.0 , zoom: 0.13 , comm: "Galaxia elíptica perteneciente al CÚMULO de VIRGO", img: "marco.png"},
+	{ name: "M 61" , time: 3.0 , zoom: 0.0931 , comm: "Galaxia espiral barrada en el corazón de VIRGO", img: "marco.png"},
+	{ name: "M 90" , time: 3.0 , zoom: 0.253 , comm: "Galaxia errante hacia la VIA LACTEA", img: "marco.png"}
 ];
 
 var starsLib = [
-	{ name: "NGC 5897" , time: 3.0 , zoom: 0.299 , comm: "Cúmulo GLOBULAR. Satélite de la Via Láctea", img: "estrella.png"},
-	{ name: "NGC 5728" , time: 3.0 , zoom: 0.0404 , comm: "Galaxia SEYFERT. Núcleo extremadamente luminoso. Emite energía de Agujeros Negros.", img: "estrella.png"},
-	{ name: "NGC 5793" , time: 3.0 , zoom: 0.244 , comm: "Másares y Mega-Másares con agujeros negros miles de millones la masa del Sol", img: "estrella.png"}
+	{ name: "NGC 5897" , time: 3.0 , zoom: 0.299 , comm: "Cúmulo GLOBULAR. Satélite de la Via Láctea", img: "marco.png"},
+	{ name: "NGC 5728" , time: 3.0 , zoom: 0.0404 , comm: "Galaxia SEYFERT. Núcleo extremadamente luminoso. Emite energía de Agujeros Negros.", img: "marco.png"},
+	{ name: "NGC 5793" , time: 3.0 , zoom: 0.244 , comm: "Másares y Mega-Másares con agujeros negros miles de millones la masa del Sol", img: "marco.png"}
 ];
 
 var starsSco = [
-	{ name: "NGC 6302" , time: 3.0 , zoom: 0.0543 , comm: "Nebulosa MARIPOSA", img: "estrella.png"},
-	{ name: "NGC 6334" , time: 3.0 , zoom: 1.52 , comm: "Nebulosa ZARPA de GATO. Hidrocarburos aromáticos policíclicos", img: "estrella.png"},
-	{ name: "NGC 6357" , time: 3.0 , zoom: 1.09 , comm: "Nebulosa LANGOSTA. Cúmulo de cúmulos con hidrogeno HII Ionizado", img: "estrella.png"} ,
-	{ name: "Antares" , time: 3.0 , zoom: 2.97 , comm: "Supergigante ROJA próxima a explotar en una brillante supernova", img: "estrella.png"}
+	{ name: "NGC 6302" , time: 3.0 , zoom: 0.0543 , comm: "Nebulosa MARIPOSA", img: "marco.png"},
+	{ name: "NGC 6334" , time: 3.0 , zoom: 1.52 , comm: "Nebulosa ZARPA de GATO. Hidrocarburos aromáticos policíclicos", img: "marco.png"},
+	{ name: "NGC 6357" , time: 3.0 , zoom: 1.09 , comm: "Nebulosa LANGOSTA. Cúmulo de cúmulos con hidrogeno HII Ionizado", img: "marco.png"} ,
+	{ name: "Antares" , time: 3.0 , zoom: 2.97 , comm: "Supergigante ROJA próxima a explotar en una brillante supernova", img: "marco.png"}
 ];
 
 var starsSag = [
-	{ name: "M 20" , time: 3.0 , zoom: 0.474 , comm: "Mezcla de nebulosas de emisión, reflexión y oscura", img: "estrella.png"},
-	{ name: "M 22" , time: 3.0 , zoom: 0.34 , comm: "Gran cúmulo de Sagitario", img: "estrella.png" },
-	{ name: "M 24" , time: 3.0 , zoom: 3.5 , comm: "Pequeña nube de Sagitario a través de ventana estelar", img: "estrella.png"},
-	{ name: "NGC 6537" , time: 3.0 , zoom: 0.046 , comm: "Nebulosa bipolar de la ARAÑA ROJA.", img: "estrella.png"},
-	{ name: "MR 80" , time: 3.0 , zoom: 1.8 , comm: "Supernova de la MUERTE. Flecha de rayos gamma que apunta a la Tierra", img: "estrella.png"}
+	{ name: "M 20" , time: 3.0 , zoom: 0.474 , comm: "Mezcla de nebulosas de emisión, reflexión y oscura", img: "marco.png"},
+	{ name: "M 22" , time: 3.0 , zoom: 0.34 , comm: "Gran cúmulo de Sagitario", img: "marco.png" },
+	{ name: "M 24" , time: 3.0 , zoom: 3.5 , comm: "Pequeña nube de Sagitario a través de ventana estelar", img: "marco.png"},
+	{ name: "NGC 6537" , time: 3.0 , zoom: 0.046 , comm: "Nebulosa bipolar de la ARAÑA ROJA.", img: "marco.png"},
+	{ name: "MR 80" , time: 3.0 , zoom: 1.8 , comm: "Supernova de la MUERTE. Flecha de rayos gamma que apunta a la Tierra", img: "marco.png"}
 ];
 
 var starsCap = [
-	{ name: "NGC 6907" , time: 3.0 , zoom: 1.13 , comm: "Galaxias que se superponen", img: "estrella.png"},
-	{ name: "M 30" , time: 3.0 , zoom: 0.244 , comm: "Cúmulo globular MEDUSA. procesos de lifting y striptease", img: "estrella.png"}
+	{ name: "NGC 6907" , time: 3.0 , zoom: 1.13 , comm: "Galaxias que se superponen", img: "marco.png"},
+	{ name: "M 30" , time: 3.0 , zoom: 0.244 , comm: "Cúmulo globular MEDUSA. procesos de lifting y striptease", img: "marco.png"}
 ];
 
 // Iniciar desde la Tierra
@@ -170,7 +175,18 @@ function planetRotation(secs , rate = 1.0 )
 	
 }
 
-function showImgObject( name , zoom , img)
+function zoomRate(IR)
+{
+var AR=16/9;
+var Rh=0.02;
+	if(IR > AR) {
+		return ((1-2*Rh)/Math.sqrt(1+(1/Math.pow(IR,2))));
+	} else {
+		return ((1-2*Rh)/(AR*Math.sqrt(1+(1/Math.pow(IR,2)))));
+	}
+}
+
+function showImgObject( name , zoom , img, sleep = 0)
 {
 var info = core.getObjectInfo(name);
 
@@ -180,24 +196,28 @@ var info = core.getObjectInfo(name);
 
 	var obj = imgSize[img];
 	var ratio = (obj == undefined) ? 1.0 : obj["width"]/obj["height"];
+	var zoomrate = zoomRate(ratio);
 
 		if(obj)
-		core.debug( img + ": ratio = "+ ratio + "  w = " + obj["width"] + "  h = " + obj["height"]);
+		core.debug( img + ": ratio = "+ ratio + "  w = " + obj["width"] + "  h = " + obj["height"] + "   z = " + zoomrate);
 		else
 		core.debug( img + ": ratio = "+ ratio );
 
 		RA = info["raJ2000"];
 		DEC = info["decJ2000"];
-		SZ = zoom/2;
+		zoomrate = (zoomrate > 0.5) ? 0.5 : zoomrate;
+		SZ = zoom*zoomrate;
 		// Añadir la imagen en la posición de la estrella
 //		var ret = StelSkyLayerMgr.insertSkyImage(imgPath + img , name + "_img",true);
-		var ret = core.loadSkyImage(id ,imgPath + img ,RA-SZ,DEC-SZ/2,RA-SZ,DEC+SZ/2,RA+SZ,DEC+SZ/2,RA+SZ,DEC-SZ/2,zoom,14.0, false);
+		var ret = core.loadSkyImage(id ,imgPath + img ,RA+SZ,DEC-SZ,RA-SZ,DEC-SZ,RA-SZ,DEC+SZ,RA+SZ,DEC+SZ,zoom,14.0, false);
 //		LabelMgr.labelEquatorial(name + " - " + imagen + " - " + ret, RA,DEC , true , 20 , "#999999" ,"N");
 
 		StelSkyLayerMgr.showLayer(id ,true);
 //		status(ScreenImageDimensions(
 		LabelMgr.labelEquatorial(name , RA , DEC , true , 20 , "#999999" ,"N");
-		core.wait(6);
+		if(sleep > 0)
+			core.wait(sleep);
+			
 		return id;
 
 	} else {
@@ -227,14 +247,18 @@ function visitConst(planet)
 {
 	if(planet.stars != null ) {
 	var stars = planet.stars;
+	var id;
 		for (var j = 0; j < stars.length; j++) {
 			zoomToObject( stars[j].name , stars[j].zoom , 5 ,
 			  stars[j].time , stars[j].comm);
 
-			showImgObject(stars[j].name, stars[j].zoom , stars[j].img );
+			id = showImgObject(stars[j].name, stars[j].zoom , stars[j].img , 6);
 
 			StelMovementMgr.zoomTo(planet.zConst , 5); // Alejamiento suave en 5 segundos
-			core.wait(5);
+			core.wait(1);
+			core.removeSkyImage(id);
+//			id = showImgObject(stars[j].name, planet.zConst/5, stars[j].img);
+			core.wait(4);
 		}
 	}
 }

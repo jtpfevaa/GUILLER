@@ -1,4 +1,6 @@
 audio/
 videos/
-img/*.png
-img/*.jpg
+img/photos/*.png
+img/photos/*.jpg
+img/ori/*.png
+img/ori/*.jpg

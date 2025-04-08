@@ -1,8 +1,8 @@
 
 all: sizeImg.js
 
-sizeImg.js: $(wildcard *.png *.jpg)
-	./sizeimg.sh > sizeImg.js
+sizeImg.js: photos/$(wildcard *.png *.jpg)
+	./sizeimg.sh photos > photos/sizeImg.js
 
 clean: 
-	rm sizeImg.js
+	rm photos/sizeImg.js
