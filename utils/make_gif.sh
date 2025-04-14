@@ -92,7 +92,7 @@ while IFS= read -r line
 do
 	set -- $line
 	echo "READ OBJ (%$#) $*: $1 $2 $3 $4"
-	if $# != 3; then continue; fi
+#	if $# != 3; then continue; fi
 	createObj $line
 	convert -dispose background -delay 10 -loop 0 /tmp/${NAME}/$1/${NAME}_$1_*.png $PTH/gifs/${NAME}_$1-SR.gif
 
