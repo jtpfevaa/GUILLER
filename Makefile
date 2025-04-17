@@ -2,6 +2,8 @@
 scriptsdir = /usr/share/stellarium/scripts
 
 all: img/sizeImg.js
+
+
 clean:
 	make -C img clean
 
