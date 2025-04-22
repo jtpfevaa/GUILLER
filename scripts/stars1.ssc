@@ -34,7 +34,7 @@ ConstellationMgr.setFlagArt(true);
 ConstellationMgr.setFlagLabels(true);
 ConstellationMgr.setArtIntensity(0.6);
 
-var saltar = true;
+var saltar = false;
 
 if(!saltar) {			//saltar bloque
 var waitInterConst = 0.6;

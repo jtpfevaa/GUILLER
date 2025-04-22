@@ -2,7 +2,7 @@
 
 ## Analizar opciones de línea de comandos
 #OPTS=$(getopt -o hc --long help,color -n'make_gif.sh' -- "$@")
-OPTSARG="r:s:d:e:c:fh --long fps:search:delay:,ext:,color:,force,help"
+OPTSARG="r:s:d:e:c:fqh --long fps:search:delay:,ext:,color:,forcei,quit,help"
 OPTS=$(getopt -o $OPTSARG -n $0 -- "$@")
 
 if [ $? -ne 0 ]; then
@@ -18,6 +18,7 @@ eval set -- "$OPTS"
 COLOR="false"
 EXT="gif"
 FORCE=false
+QUIT=false
 DELAY="10"
 STRSED="[^# \t][^ \t]*"
 FPS=false
@@ -46,6 +47,9 @@ while true; do
 	-s | --search)
 		STRSED="$2"
 		shift 2 ;;
+	-q | --quit)
+		QUIT=true
+		shift ;;
 	--)
 		shift
 		break ;;
@@ -109,7 +113,10 @@ if [ ! -d /tmp/${NAME} ]; then
 	OPTS+=" -vsync 0"
 	echo "OPTS=$OPTS"
 	ffmpeg -i ${FILE} ${OPTS} /tmp/${NAME}/${NAME}_%03d.png > /dev/null
+	echo "Construido los fotogramas en /tmp/$NAME"
 fi
+
+if [ $QUIT == true ]; then echo "SALIR DEL PROGRAMA";exit 2;fi
 
 [ -f $PTH/conf/$NAME.conf ] || { echo "Fichero $PTH/conf/$NAME.conf no existe" ; exit 1; }
 

@@ -8,3 +8,19 @@ all:
 
 clean: 
 	rm -r gif
+	rm aterrizaje-wave.webm takeoff-wave.webm
+
+gifs3:
+	make_video.sh -c 0xB2D445 -e gif gifs3.webm
+
+gifs4:
+	make_video.sh -c 0xB2D445 -e gif gifs4.webm
+
+webm: aterrizaje-wave.webm takeoff-wave.webm
+
+aterrizaje-wave.webm: aterrizaje-wave.mp4
+	ffmpeg -i $< -vf colorkey=0xb2d445:0.1:0.0 $@
+
+takeoff-wave.webm: takeoff-wave.mp4
+	ffmpeg -i $< -vf colorkey=0xb2d445:0.1:0.0 $@
+
