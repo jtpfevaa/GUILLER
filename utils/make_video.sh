@@ -2,7 +2,7 @@
 
 ## Analizar opciones de línea de comandos
 #OPTS=$(getopt -o hc --long help,color -n'make_gif.sh' -- "$@")
-OPTSARG="r:s:d:e:c:fqh --long fps:search:delay:,ext:,color:,forcei,quit,help"
+OPTSARG="r:s:d:e:c:fqh --long fps:,search:,delay:,ext:,color:,force,quit,help"
 OPTS=$(getopt -o $OPTSARG -n $0 -- "$@")
 
 if [ $? -ne 0 ]; then
@@ -59,6 +59,8 @@ while true; do
 	esac
 done
 
+[ $# -lt 1 ] && { echo "Mal numero de parametros" ; exit 4;}
+
 FILE=$1
 PTH=`dirname "$FILE"`
 FULLNAME="${FILE##*/}"
@@ -86,6 +88,7 @@ createObj()
 	RANGE=`awk "BEGIN {for(i=$3;i<=${MAXFRAME};i++) printf \"%03d \",i; print}"`
 
 	echo "RANGE=$RANGE"
+	inx=0
 	for numimg in `eval echo $RANGE`
 	do
 		img="/tmp/${NAME}/${NAME}_${numimg}.png"
@@ -94,7 +97,9 @@ createObj()
 
 		echo "CONVERTIR $img a ${baseimg} numimg=$numimg"
 		echo convert "$img" -crop $2 +repage "/tmp/${NAME}/$1/${baseimg%.*}_$1.png"
-		convert "$img" -crop $2 +repage "/tmp/${NAME}/$1/${NAME}_$1_${numimg}.png" > /dev/null
+		ninx=$(printf "%03d" "$inx")
+		convert "$img" -crop $2 +repage "/tmp/${NAME}/$1/${NAME}_$1_${ninx}.png" > /dev/null
+		inx=$((inx+1))
 	done
 	
 
