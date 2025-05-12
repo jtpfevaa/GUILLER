@@ -2,7 +2,7 @@
 
 ## Analizar opciones de línea de comandos
 #OPTS=$(getopt -o hc --long help,color -n'make_gif.sh' -- "$@")
-OPTSARG="r:s:d:e:c:fqh --long fps:,search:,delay:,ext:,color:,force,quit,help"
+OPTSARG="F:r:s:d:e:c:fqh --long fuzz:,fps:,search:,delay:,ext:,color:,force,quit,help"
 OPTS=$(getopt -o $OPTSARG -n $0 -- "$@")
 
 if [ $? -ne 0 ]; then
@@ -22,6 +22,7 @@ QUIT=false
 DELAY="10"
 STRSED="[^# \t][^ \t]*"
 FPS=false
+FUZZ=false
 
 ## Procesar las opciones
 while true; do
@@ -34,6 +35,9 @@ while true; do
 		shift 2 ;;
 	-e | --ext)
 		EXT="$2"
+		shift 2 ;;
+	-F | --fuzz)
+		FUZZ="$2"
 		shift 2 ;;
 	-f | --force)
 		FORCE=true
@@ -77,7 +81,7 @@ echo "FILE = $FILE, PATH = $PTH, FULLNAME = $FULLNAME , NAME = $NAME "
 
 createObj()
 {
-#	echo "RECIBIDO 1:$1 2:$2 3:$3 4:$4"
+#	echo "$# RECIBIDO 1:$1 2:$2 3:$3 4:$4"
 	MAXFRAME=`ls -rt /tmp/${NAME}/${NAME}_*.png | wc -l`
 	if [ $MAXFRAME -gt $4 ]; then MAXFRAME=$4; fi 
 #	echo "MAXFRAME=$MAXFRAME"
@@ -89,6 +93,18 @@ createObj()
 
 	echo "RANGE=$RANGE"
 	inx=0
+
+	if [ $FUZZ != "false" ]; then
+		OPTSLC=" -fuzz ${FUZZ}";
+	else
+		OPTSLC="";
+	fi
+	if [ $# -gt 4 ]; then 
+		OPTSLC+=" -transparent $5"; 
+	else 
+		OPTSLC=""; 
+	fi
+
 	for numimg in `eval echo $RANGE`
 	do
 		img="/tmp/${NAME}/${NAME}_${numimg}.png"
@@ -96,9 +112,9 @@ createObj()
 #		numimg=`echo $baseimg|sed -e "s/^${NAME}_\([0-9]*\)\.png/\1/"`
 
 		echo "CONVERTIR $img a ${baseimg} numimg=$numimg"
-		echo convert "$img" -crop $2 +repage "/tmp/${NAME}/$1/${baseimg%.*}_$1.png"
 		ninx=$(printf "%03d" "$inx")
-		convert "$img" -crop $2 +repage "/tmp/${NAME}/$1/${NAME}_$1_${ninx}.png" > /dev/null
+		echo convert "$img" -crop $2 +repage${OPTSLC} "/tmp/${NAME}/$1/${baseimg%.*}_$1.png"
+		convert "$img" -crop $2 +repage${OPTSLC} "/tmp/${NAME}/$1/${NAME}_$1_${ninx}.png" > /dev/null
 		inx=$((inx+1))
 	done
 	

@@ -36,7 +36,7 @@ ConstellationMgr.setArtIntensity(0.6);
 
 var saltar = false;
 
-if(!saltar) {			//saltar bloque
+if(saltar == false) {			//saltar bloque
 var waitInterConst = 0.6;
 for(i=0; i<constellations.length; i++)
 {
