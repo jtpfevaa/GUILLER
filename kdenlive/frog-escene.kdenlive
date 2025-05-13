@@ -19,23 +19,46 @@
   <property name="kdenlive:file_size">2121125</property>
   <property name="kdenlive:file_hash">04604e6c617defdb928b52acda7056f3</property>
  </producer>
- <producer id="producer3" in="00:00:00.000" out="00:01:05.267">
-  <property name="length">1959</property>
+ <producer id="producer2" in="00:00:00.000" out="00:00:03.867">
+  <property name="length">117</property>
   <property name="eof">pause</property>
-  <property name="resource">/home/jtpfevaa/projects/GUILLER/png/tienda-campaña-2.png</property>
-  <property name="ttl">25</property>
-  <property name="aspect_ratio">1</property>
-  <property name="progressive">1</property>
+  <property name="resource">/home/jtpfevaa/projects/GUILLER/gif/animaker/videos/gif/frog_jumps_frog-SR.gif</property>
+  <property name="audio_index">-1</property>
+  <property name="video_index">0</property>
+  <property name="mute_on_pause">0</property>
+  <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
-  <property name="meta.media.width">2500</property>
-  <property name="meta.media.height">2500</property>
-  <property name="mlt_service">qimage</property>
-  <property name="kdenlive:clipname"/>
-  <property name="kdenlive:duration">00:00:05.000</property>
+  <property name="aspect_ratio">1</property>
+  <property name="kdenlive:clipname">frog_jumps_frog-SR.gif</property>
+  <property name="kdenlive:proxy">-</property>
+  <property name="kdenlive:originalurl">/home/jtpfevaa/projects/GUILLER/gif/animaker/videos/gif/frog_jumps_frog-SR.gif</property>
+  <property name="kdenlive:id">3</property>
+  <property name="kdenlive:file_size">23494</property>
+  <property name="kdenlive:file_hash">36b6d06c5683121b5b7b53a895f7be44</property>
   <property name="kdenlive:folderid">-1</property>
-  <property name="kdenlive:id">6</property>
-  <property name="kdenlive:file_size">4198923</property>
-  <property name="kdenlive:file_hash">2d8eb738425bf639e51769a37e94bd08</property>
+  <property name="meta.media.nb_streams">1</property>
+  <property name="meta.media.0.stream.type">video</property>
+  <property name="meta.media.0.stream.frame_rate">3.33333</property>
+  <property name="meta.media.0.stream.sample_aspect_ratio">0</property>
+  <property name="meta.media.0.codec.width">426</property>
+  <property name="meta.media.0.codec.height">207</property>
+  <property name="meta.media.0.codec.rotate">0</property>
+  <property name="meta.media.0.codec.pix_fmt">bgra</property>
+  <property name="meta.media.0.codec.sample_aspect_ratio">0</property>
+  <property name="meta.media.0.codec.colorspace">601</property>
+  <property name="meta.media.0.codec.name">gif</property>
+  <property name="meta.media.0.codec.long_name">GIF (Graphics Interchange Format)</property>
+  <property name="meta.media.0.codec.bit_rate">0</property>
+  <property name="meta.media.sample_aspect_num">1</property>
+  <property name="meta.media.sample_aspect_den">1</property>
+  <property name="meta.media.frame_rate_num">10</property>
+  <property name="meta.media.frame_rate_den">3</property>
+  <property name="meta.media.colorspace">601</property>
+  <property name="meta.media.color_trc">2</property>
+  <property name="meta.media.has_b_frames">0</property>
+  <property name="meta.media.width">426</property>
+  <property name="meta.media.height">207</property>
+  <property name="meta.media.color_range">mpeg</property>
  </producer>
  <producer id="producer1" in="00:00:00.000" out="00:00:03.867">
   <property name="length">117</property>
@@ -78,51 +101,28 @@
   <property name="meta.media.height">207</property>
   <property name="meta.media.color_range">mpeg</property>
  </producer>
- <producer id="producer2" in="00:00:00.000" out="00:00:03.867">
-  <property name="length">117</property>
+ <producer id="producer3" in="00:00:00.000" out="00:01:05.267">
+  <property name="length">1959</property>
   <property name="eof">pause</property>
-  <property name="resource">/home/jtpfevaa/projects/GUILLER/gif/animaker/videos/gif/frog_jumps_frog-SR.gif</property>
-  <property name="audio_index">-1</property>
-  <property name="video_index">0</property>
-  <property name="mute_on_pause">0</property>
-  <property name="mlt_service">avformat-novalidate</property>
-  <property name="seekable">1</property>
+  <property name="resource">/home/jtpfevaa/projects/GUILLER/png/tienda-campaña-2.png</property>
+  <property name="ttl">25</property>
   <property name="aspect_ratio">1</property>
-  <property name="kdenlive:clipname">frog_jumps_frog-SR.gif</property>
-  <property name="kdenlive:proxy">-</property>
-  <property name="kdenlive:originalurl">/home/jtpfevaa/projects/GUILLER/gif/animaker/videos/gif/frog_jumps_frog-SR.gif</property>
-  <property name="kdenlive:id">3</property>
-  <property name="kdenlive:file_size">23494</property>
-  <property name="kdenlive:file_hash">36b6d06c5683121b5b7b53a895f7be44</property>
+  <property name="progressive">1</property>
+  <property name="seekable">1</property>
+  <property name="meta.media.width">2500</property>
+  <property name="meta.media.height">2500</property>
+  <property name="mlt_service">qimage</property>
+  <property name="kdenlive:clipname"/>
+  <property name="kdenlive:duration">00:00:05.000</property>
   <property name="kdenlive:folderid">-1</property>
-  <property name="meta.media.nb_streams">1</property>
-  <property name="meta.media.0.stream.type">video</property>
-  <property name="meta.media.0.stream.frame_rate">3.33333</property>
-  <property name="meta.media.0.stream.sample_aspect_ratio">0</property>
-  <property name="meta.media.0.codec.width">426</property>
-  <property name="meta.media.0.codec.height">207</property>
-  <property name="meta.media.0.codec.rotate">0</property>
-  <property name="meta.media.0.codec.pix_fmt">bgra</property>
-  <property name="meta.media.0.codec.sample_aspect_ratio">0</property>
-  <property name="meta.media.0.codec.colorspace">601</property>
-  <property name="meta.media.0.codec.name">gif</property>
-  <property name="meta.media.0.codec.long_name">GIF (Graphics Interchange Format)</property>
-  <property name="meta.media.0.codec.bit_rate">0</property>
-  <property name="meta.media.sample_aspect_num">1</property>
-  <property name="meta.media.sample_aspect_den">1</property>
-  <property name="meta.media.frame_rate_num">10</property>
-  <property name="meta.media.frame_rate_den">3</property>
-  <property name="meta.media.colorspace">601</property>
-  <property name="meta.media.color_trc">2</property>
-  <property name="meta.media.has_b_frames">0</property>
-  <property name="meta.media.width">426</property>
-  <property name="meta.media.height">207</property>
-  <property name="meta.media.color_range">mpeg</property>
+  <property name="kdenlive:id">6</property>
+  <property name="kdenlive:file_size">4198923</property>
+  <property name="kdenlive:file_hash">2d8eb738425bf639e51769a37e94bd08</property>
  </producer>
  <producer id="producer4" in="00:00:00.000" out="00:00:04.967">
   <property name="length">00:00:05.000</property>
   <property name="eof">pause</property>
-  <property name="resource">/tmp/frog_jumps/frog_jumps_001.png</property>
+  <property name="resource">/home/jtpfevaa/projects/GUILLER/gif/animaker/videos/frog_jumps_001.png</property>
   <property name="ttl">25</property>
   <property name="aspect_ratio">1</property>
   <property name="progressive">1</property>
@@ -140,7 +140,7 @@
  <producer id="producer5" in="00:00:00.000" out="00:00:04.967">
   <property name="length">00:00:05.000</property>
   <property name="eof">pause</property>
-  <property name="resource">/tmp/frog_jumps/frog_jumps_002.png</property>
+  <property name="resource">/home/jtpfevaa/projects/GUILLER/gif/animaker/videos/frog_jumps_002.png</property>
   <property name="ttl">25</property>
   <property name="aspect_ratio">1</property>
   <property name="progressive">1</property>
@@ -177,6 +177,10 @@
   <property name="length">330</property>
   <property name="eof">pause</property>
   <property name="resource">/home/jtpfevaa/projects/GUILLER/videos/animaker/planets/gif/gifs7_windmn-SR.gif</property>
+  <property name="audio_index">-1</property>
+  <property name="video_index">0</property>
+  <property name="mute_on_pause">0</property>
+  <property name="mlt_service">avformat-novalidate</property>
   <property name="meta.media.nb_streams">1</property>
   <property name="meta.media.0.stream.type">video</property>
   <property name="meta.media.0.stream.frame_rate">10</property>
@@ -194,10 +198,6 @@
   <property name="meta.media.sample_aspect_num">1</property>
   <property name="meta.media.sample_aspect_den">1</property>
   <property name="aspect_ratio">1</property>
-  <property name="audio_index">-1</property>
-  <property name="video_index">0</property>
-  <property name="mute_on_pause">0</property>
-  <property name="mlt_service">avformat-novalidate</property>
   <property name="kdenlive:clipname"/>
   <property name="kdenlive:folderid">-1</property>
   <property name="meta.media.frame_rate_num">10</property>
@@ -218,6 +218,10 @@
   <property name="length">330</property>
   <property name="eof">pause</property>
   <property name="resource">/home/jtpfevaa/projects/GUILLER/videos/animaker/planets/gif/gifs7_windwm-SR.gif</property>
+  <property name="audio_index">-1</property>
+  <property name="video_index">0</property>
+  <property name="mute_on_pause">0</property>
+  <property name="mlt_service">avformat-novalidate</property>
   <property name="meta.media.nb_streams">1</property>
   <property name="meta.media.0.stream.type">video</property>
   <property name="meta.media.0.stream.frame_rate">10</property>
@@ -235,10 +239,6 @@
   <property name="meta.media.sample_aspect_num">1</property>
   <property name="meta.media.sample_aspect_den">1</property>
   <property name="aspect_ratio">1</property>
-  <property name="audio_index">-1</property>
-  <property name="video_index">0</property>
-  <property name="mute_on_pause">0</property>
-  <property name="mlt_service">avformat-novalidate</property>
   <property name="kdenlive:clipname"/>
   <property name="kdenlive:folderid">-1</property>
   <property name="meta.media.frame_rate_num">10</property>
@@ -297,13 +297,13 @@
                 "type": "Leaf"
             },
             {
-                "data": "5:585",
-                "leaf": "clip",
+                "data": "5:234",
+                "leaf": "composition",
                 "type": "Leaf"
             },
             {
-                "data": "5:351",
-                "leaf": "composition",
+                "data": "5:585",
+                "leaf": "clip",
                 "type": "Leaf"
             }
         ],
@@ -387,26 +387,6 @@
     {
         "children": [
             {
-                "data": "5:0",
-                "leaf": "clip",
-                "type": "Leaf"
-            },
-            {
-                "data": "5:117",
-                "leaf": "clip",
-                "type": "Leaf"
-            },
-            {
-                "data": "5:0",
-                "leaf": "composition",
-                "type": "Leaf"
-            }
-        ],
-        "type": "Normal"
-    },
-    {
-        "children": [
-            {
                 "data": "5:234",
                 "leaf": "clip",
                 "type": "Leaf"
@@ -417,9 +397,24 @@
                 "type": "Leaf"
             },
             {
-                "data": "5:117",
-                "leaf": "composition",
-                "type": "Leaf"
+                "children": [
+                    {
+                        "data": "5:0",
+                        "leaf": "clip",
+                        "type": "Leaf"
+                    },
+                    {
+                        "data": "5:117",
+                        "leaf": "clip",
+                        "type": "Leaf"
+                    },
+                    {
+                        "data": "5:0",
+                        "leaf": "composition",
+                        "type": "Leaf"
+                    }
+                ],
+                "type": "Normal"
             }
         ],
         "type": "Normal"
@@ -437,7 +432,7 @@
                 "type": "Leaf"
             },
             {
-                "data": "5:585",
+                "data": "5:468",
                 "leaf": "composition",
                 "type": "Leaf"
             }
@@ -447,7 +442,7 @@
 ]
 </property>
   <property name="kdenlive:docproperties.kdenliveversion">21.12.3</property>
-  <property name="kdenlive:docproperties.position">1939</property>
+  <property name="kdenlive:docproperties.position">1548</property>
   <property name="kdenlive:docproperties.previewextension"/>
   <property name="kdenlive:docproperties.previewparameters"/>
   <property name="kdenlive:docproperties.profile">uhd_2160p_30</property>
@@ -457,11 +452,11 @@
   <property name="kdenlive:docproperties.proxyminsize">1000</property>
   <property name="kdenlive:docproperties.proxyparams"/>
   <property name="kdenlive:docproperties.proxyresize">640</property>
-  <property name="kdenlive:docproperties.scrollPos">57</property>
+  <property name="kdenlive:docproperties.scrollPos">431</property>
   <property name="kdenlive:docproperties.seekOffset">30000</property>
   <property name="kdenlive:docproperties.version">1.04</property>
   <property name="kdenlive:docproperties.verticalzoom">1</property>
-  <property name="kdenlive:docproperties.videoTarget">8</property>
+  <property name="kdenlive:docproperties.videoTarget">-1</property>
   <property name="kdenlive:docproperties.zonein">0</property>
   <property name="kdenlive:docproperties.zoneout">75</property>
   <property name="kdenlive:docproperties.zoom">8</property>
@@ -469,12 +464,12 @@
   <property name="kdenlive:documentnotes"/>
   <property name="xml_retain">1</property>
   <entry producer="producer0" in="00:00:00.000" out="00:01:12.667"/>
-  <entry producer="producer3" in="00:00:00.000" out="00:01:05.267"/>
-  <entry producer="producer1" in="00:00:00.000" out="00:00:03.867"/>
   <entry producer="producer2" in="00:00:00.000" out="00:00:03.867"/>
+  <entry producer="producer1" in="00:00:00.000" out="00:00:03.867"/>
+  <entry producer="producer3" in="00:00:00.000" out="00:01:05.267"/>
   <entry producer="producer4" in="00:00:00.000" out="00:00:04.967"/>
   <entry producer="producer5" in="00:00:00.000" out="00:00:04.967"/>
-  <entry producer="producer6" in="00:00:00.000" out="00:00:04.967"/>
+  <entry producer="producer6" in="00:00:00.000" out="00:00:38.400"/>
   <entry producer="producer7" in="00:00:00.000" out="00:00:10.967"/>
   <entry producer="producer8" in="00:00:00.000" out="00:00:10.967"/>
  </playlist>
@@ -1067,8 +1062,11 @@
  <tractor id="tractor9" in="00:00:00.000" out="00:00:47.467">
   <property name="kdenlive:trackheight">69</property>
   <property name="kdenlive:timeline_active">1</property>
-  <track producer="playlist18"/>
-  <track producer="playlist19"/>
+  <property name="kdenlive:collapsed">0</property>
+  <property name="kdenlive:thumbs_format"/>
+  <property name="kdenlive:audio_rec"/>
+  <track hide="audio" producer="playlist18"/>
+  <track hide="audio" producer="playlist19"/>
  </tractor>
  <tractor id="tractor10" in="00:00:00.000" out="00:17:44.633">
   <track producer="black_track"/>
@@ -1082,43 +1080,7 @@
   <track producer="tractor7"/>
   <track producer="tractor8"/>
   <track producer="tractor9"/>
-  <transition id="transition0">
-   <property name="a_track">0</property>
-   <property name="b_track">1</property>
-   <property name="mlt_service">mix</property>
-   <property name="kdenlive_id">mix</property>
-   <property name="internal_added">237</property>
-   <property name="always_active">1</property>
-   <property name="accepts_blanks">1</property>
-   <property name="sum">1</property>
-  </transition>
-  <transition id="transition1">
-   <property name="a_track">0</property>
-   <property name="b_track">2</property>
-   <property name="mlt_service">mix</property>
-   <property name="kdenlive_id">mix</property>
-   <property name="internal_added">237</property>
-   <property name="always_active">1</property>
-   <property name="accepts_blanks">1</property>
-   <property name="sum">1</property>
-  </transition>
-  <transition id="transition2" in="00:00:05.567" out="00:00:09.433">
-   <property name="a_track">3</property>
-   <property name="b_track">4</property>
-   <property name="distort">0</property>
-   <property name="rect">00:00:00.000=-348 1155 1152 648 1.000000;00:00:03.867=-334 1237 1152 648 1.000000</property>
-   <property name="fill">1</property>
-   <property name="mlt_service">affine</property>
-   <property name="kdenlive_id">affine</property>
-   <property name="force_track">1</property>
-   <property name="rotate_x">00:00:00.000=0;00:00:03.867=0</property>
-   <property name="rotate_y">00:00:00.000=0;00:00:03.867=0</property>
-   <property name="rotate_z">00:00:00.000=0;00:00:03.867=0</property>
-   <property name="keyed">1</property>
-   <property name="transition.repeat_off">1</property>
-   <property name="transition.mirror_off">1</property>
-  </transition>
-  <transition id="transition3" in="00:00:09.467" out="00:00:21.133">
+  <transition id="transition0" in="00:00:09.467" out="00:00:21.133">
    <property name="a_track">3</property>
    <property name="b_track">4</property>
    <property name="distort">0</property>
@@ -1134,7 +1096,23 @@
    <property name="transition.repeat_off">1</property>
    <property name="transition.mirror_off">1</property>
   </transition>
-  <transition id="transition4" in="00:00:01.833" out="00:00:17.400">
+  <transition id="transition1" in="00:00:05.567" out="00:00:09.433">
+   <property name="a_track">3</property>
+   <property name="b_track">4</property>
+   <property name="distort">0</property>
+   <property name="rect">00:00:00.000=-348 1155 1152 648 1.000000;00:00:03.867=-334 1237 1152 648 1.000000</property>
+   <property name="fill">1</property>
+   <property name="mlt_service">affine</property>
+   <property name="kdenlive_id">affine</property>
+   <property name="force_track">1</property>
+   <property name="rotate_x">00:00:00.000=0;00:00:03.867=0</property>
+   <property name="rotate_y">00:00:00.000=0;00:00:03.867=0</property>
+   <property name="rotate_z">00:00:00.000=0;00:00:03.867=0</property>
+   <property name="keyed">1</property>
+   <property name="transition.repeat_off">1</property>
+   <property name="transition.mirror_off">1</property>
+  </transition>
+  <transition id="transition2" in="00:00:01.833" out="00:00:17.400">
    <property name="a_track">3</property>
    <property name="b_track">5</property>
    <property name="distort">0</property>
@@ -1150,7 +1128,7 @@
    <property name="transition.repeat_off">1</property>
    <property name="transition.mirror_off">1</property>
   </transition>
-  <transition id="transition5" in="00:00:23.900" out="00:00:39.467">
+  <transition id="transition3" in="00:00:23.900" out="00:00:39.467">
    <property name="a_track">3</property>
    <property name="b_track">5</property>
    <property name="distort">0</property>
@@ -1166,7 +1144,7 @@
    <property name="transition.repeat_off">1</property>
    <property name="transition.mirror_off">1</property>
   </transition>
-  <transition id="transition6" in="00:00:11.700" out="00:00:15.567">
+  <transition id="transition4" in="00:00:03.900" out="00:00:07.767">
    <property name="a_track">3</property>
    <property name="b_track">6</property>
    <property name="distort">0</property>
@@ -1182,7 +1160,7 @@
    <property name="transition.repeat_off">1</property>
    <property name="transition.mirror_off">1</property>
   </transition>
-  <transition id="transition7" in="00:00:03.900" out="00:00:07.767">
+  <transition id="transition5" in="00:00:19.500" out="00:00:23.367">
    <property name="a_track">3</property>
    <property name="b_track">6</property>
    <property name="distort">0</property>
@@ -1198,7 +1176,55 @@
    <property name="transition.repeat_off">1</property>
    <property name="transition.mirror_off">1</property>
   </transition>
-  <transition id="transition8" in="00:00:19.500" out="00:00:23.367">
+  <transition id="transition6" out="00:00:03.867">
+   <property name="a_track">3</property>
+   <property name="b_track">6</property>
+   <property name="distort">0</property>
+   <property name="rect">00:00:00.000=1344 756 1152 648 1.000000</property>
+   <property name="fill">1</property>
+   <property name="mlt_service">affine</property>
+   <property name="kdenlive_id">affine</property>
+   <property name="force_track">1</property>
+   <property name="rotate_x">00:00:00.000=0</property>
+   <property name="rotate_y">00:00:00.000=0</property>
+   <property name="rotate_z">00:00:00.000=0</property>
+   <property name="keyed">1</property>
+   <property name="transition.repeat_off">1</property>
+   <property name="transition.mirror_off">1</property>
+  </transition>
+  <transition id="transition7" in="00:00:15.600" out="00:00:19.467">
+   <property name="a_track">3</property>
+   <property name="b_track">6</property>
+   <property name="distort">0</property>
+   <property name="rect">00:00:00.000=1344 756 1152 648 1.000000</property>
+   <property name="fill">1</property>
+   <property name="mlt_service">affine</property>
+   <property name="kdenlive_id">affine</property>
+   <property name="force_track">1</property>
+   <property name="rotate_x">00:00:00.000=0</property>
+   <property name="rotate_y">00:00:00.000=0</property>
+   <property name="rotate_z">00:00:00.000=0</property>
+   <property name="keyed">1</property>
+   <property name="transition.repeat_off">1</property>
+   <property name="transition.mirror_off">1</property>
+  </transition>
+  <transition id="transition8" in="00:00:07.800" out="00:00:11.667">
+   <property name="a_track">3</property>
+   <property name="b_track">6</property>
+   <property name="distort">0</property>
+   <property name="rect">00:00:00.000=1344 756 1152 648 1.000000</property>
+   <property name="fill">1</property>
+   <property name="mlt_service">affine</property>
+   <property name="kdenlive_id">affine</property>
+   <property name="force_track">1</property>
+   <property name="rotate_x">00:00:00.000=0</property>
+   <property name="rotate_y">00:00:00.000=0</property>
+   <property name="rotate_z">00:00:00.000=0</property>
+   <property name="keyed">1</property>
+   <property name="transition.repeat_off">1</property>
+   <property name="transition.mirror_off">1</property>
+  </transition>
+  <transition id="transition9" in="00:00:27.300" out="00:00:31.167">
    <property name="a_track">3</property>
    <property name="b_track">6</property>
    <property name="distort">0</property>
@@ -1214,7 +1240,7 @@
    <property name="transition.repeat_off">1</property>
    <property name="transition.mirror_off">1</property>
   </transition>
-  <transition id="transition9" out="00:00:03.867">
+  <transition id="transition10" in="00:00:23.400" out="00:00:27.267">
    <property name="a_track">3</property>
    <property name="b_track">6</property>
    <property name="distort">0</property>
@@ -1230,39 +1256,7 @@
    <property name="transition.repeat_off">1</property>
    <property name="transition.mirror_off">1</property>
   </transition>
-  <transition id="transition10" in="00:00:15.600" out="00:00:19.467">
-   <property name="a_track">3</property>
-   <property name="b_track">6</property>
-   <property name="distort">0</property>
-   <property name="rect">00:00:00.000=1344 756 1152 648 1.000000</property>
-   <property name="fill">1</property>
-   <property name="mlt_service">affine</property>
-   <property name="kdenlive_id">affine</property>
-   <property name="force_track">1</property>
-   <property name="rotate_x">00:00:00.000=0</property>
-   <property name="rotate_y">00:00:00.000=0</property>
-   <property name="rotate_z">00:00:00.000=0</property>
-   <property name="keyed">1</property>
-   <property name="transition.repeat_off">1</property>
-   <property name="transition.mirror_off">1</property>
-  </transition>
-  <transition id="transition11" in="00:00:07.800" out="00:00:11.667">
-   <property name="a_track">3</property>
-   <property name="b_track">6</property>
-   <property name="distort">0</property>
-   <property name="rect">00:00:00.000=1344 756 1152 648 1.000000</property>
-   <property name="fill">1</property>
-   <property name="mlt_service">affine</property>
-   <property name="kdenlive_id">affine</property>
-   <property name="force_track">1</property>
-   <property name="rotate_x">00:00:00.000=0</property>
-   <property name="rotate_y">00:00:00.000=0</property>
-   <property name="rotate_z">00:00:00.000=0</property>
-   <property name="keyed">1</property>
-   <property name="transition.repeat_off">1</property>
-   <property name="transition.mirror_off">1</property>
-  </transition>
-  <transition id="transition12" in="00:00:27.300" out="00:00:31.167">
+  <transition id="transition11" in="00:00:11.700" out="00:00:15.567">
    <property name="a_track">3</property>
    <property name="b_track">6</property>
    <property name="distort">0</property>
@@ -1278,23 +1272,7 @@
    <property name="transition.repeat_off">1</property>
    <property name="transition.mirror_off">1</property>
   </transition>
-  <transition id="transition13" in="00:00:23.400" out="00:00:27.267">
-   <property name="a_track">3</property>
-   <property name="b_track">6</property>
-   <property name="distort">0</property>
-   <property name="rect">00:00:00.000=1344 756 1152 648 1.000000</property>
-   <property name="fill">1</property>
-   <property name="mlt_service">affine</property>
-   <property name="kdenlive_id">affine</property>
-   <property name="force_track">1</property>
-   <property name="rotate_x">00:00:00.000=0</property>
-   <property name="rotate_y">00:00:00.000=0</property>
-   <property name="rotate_z">00:00:00.000=0</property>
-   <property name="keyed">1</property>
-   <property name="transition.repeat_off">1</property>
-   <property name="transition.mirror_off">1</property>
-  </transition>
-  <transition id="transition14" out="00:01:04.600">
+  <transition id="transition12" out="00:01:04.600">
    <property name="a_track">3</property>
    <property name="b_track">7</property>
    <property name="distort">0</property>
@@ -1310,7 +1288,7 @@
    <property name="transition.repeat_off">1</property>
    <property name="transition.mirror_off">1</property>
   </transition>
-  <transition id="transition15" in="00:00:41.000" out="00:00:49.767">
+  <transition id="transition13" in="00:00:41.000" out="00:00:49.767">
    <property name="a_track">3</property>
    <property name="b_track">8</property>
    <property name="distort">0</property>
@@ -1326,7 +1304,7 @@
    <property name="transition.repeat_off">1</property>
    <property name="transition.mirror_off">1</property>
   </transition>
-  <transition id="transition16" in="00:00:30.700" out="00:00:39.467">
+  <transition id="transition14" in="00:00:30.700" out="00:00:39.467">
    <property name="a_track">3</property>
    <property name="b_track">9</property>
    <property name="distort">0</property>
@@ -1334,15 +1312,15 @@
    <property name="fill">1</property>
    <property name="mlt_service">affine</property>
    <property name="kdenlive_id">affine</property>
+   <property name="force_track">1</property>
    <property name="rotate_x">00:00:00.000=0</property>
    <property name="rotate_y">00:00:00.000=0</property>
    <property name="rotate_z">00:00:00.000=0</property>
    <property name="keyed">1</property>
    <property name="transition.repeat_off">1</property>
    <property name="transition.mirror_off">1</property>
-   <property name="force_track">1</property>
   </transition>
-  <transition id="transition17" in="00:00:42.500" out="00:00:53.467">
+  <transition id="transition15" in="00:00:42.500" out="00:00:53.467">
    <property name="a_track">3</property>
    <property name="b_track">9</property>
    <property name="distort">0</property>
@@ -1350,15 +1328,15 @@
    <property name="fill">1</property>
    <property name="mlt_service">affine</property>
    <property name="kdenlive_id">affine</property>
+   <property name="force_track">1</property>
    <property name="rotate_x">00:00:00.000=0</property>
    <property name="rotate_y">00:00:00.000=0</property>
    <property name="rotate_z">00:00:00.000=0</property>
    <property name="keyed">1</property>
    <property name="transition.repeat_off">1</property>
    <property name="transition.mirror_off">1</property>
-   <property name="force_track">1</property>
   </transition>
-  <transition id="transition18" in="00:00:27.300" out="00:00:37.467">
+  <transition id="transition16" in="00:00:27.300" out="00:00:37.467">
    <property name="a_track">3</property>
    <property name="b_track">10</property>
    <property name="distort">0</property>
@@ -1374,7 +1352,7 @@
    <property name="transition.repeat_off">1</property>
    <property name="transition.mirror_off">1</property>
   </transition>
-  <transition id="transition19" in="00:00:37.500" out="00:00:47.467">
+  <transition id="transition17" in="00:00:37.500" out="00:00:47.467">
    <property name="a_track">3</property>
    <property name="b_track">10</property>
    <property name="distort">0</property>
@@ -1382,13 +1360,33 @@
    <property name="fill">1</property>
    <property name="mlt_service">affine</property>
    <property name="kdenlive_id">affine</property>
+   <property name="force_track">1</property>
    <property name="rotate_x">00:00:00.000=0</property>
    <property name="rotate_y">00:00:00.000=0</property>
    <property name="rotate_z">00:00:00.000=0</property>
    <property name="keyed">1</property>
    <property name="transition.repeat_off">1</property>
    <property name="transition.mirror_off">1</property>
-   <property name="force_track">1</property>
+  </transition>
+  <transition id="transition18">
+   <property name="a_track">0</property>
+   <property name="b_track">1</property>
+   <property name="mlt_service">mix</property>
+   <property name="kdenlive_id">mix</property>
+   <property name="internal_added">237</property>
+   <property name="always_active">1</property>
+   <property name="accepts_blanks">1</property>
+   <property name="sum">1</property>
+  </transition>
+  <transition id="transition19">
+   <property name="a_track">0</property>
+   <property name="b_track">2</property>
+   <property name="mlt_service">mix</property>
+   <property name="kdenlive_id">mix</property>
+   <property name="internal_added">237</property>
+   <property name="always_active">1</property>
+   <property name="accepts_blanks">1</property>
+   <property name="sum">1</property>
   </transition>
   <transition id="transition20">
    <property name="a_track">0</property>

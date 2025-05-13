@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 ## Analizar opciones de línea de comandos

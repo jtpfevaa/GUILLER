@@ -47,3 +47,12 @@ aterrizaje-wave.webm: aterrizaje-wave.mp4
 takeoff-wave.webm: takeoff-wave.mp4
 	ffmpeg -i $< -vf colorkey=0xb2d445:0.1:0.0 $@
 
+frog:
+	make_video.sh -c 0xffffff -s frog -d 30 -e gif frog_jumps.gif
+
+flash_pet: gifs3_dogwalk-SR.png gifs6_cat-SR.png gifs6_alien2-SR.png
+	flash_gif.sh -M 8 -m 5 -f flash_pet.gif gifs3_dogwalk-SR.png gifs6_cat-SR.png gifs6_alien2-SR.png
+
+petmanSS: flash_pet.gif
+	quitar_silueta_gif.sh gif/gifs6_petmn-SR.gif petmn-SS.gif msk_pet.png 
+
