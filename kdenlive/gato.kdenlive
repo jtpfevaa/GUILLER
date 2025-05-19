@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <mlt LC_NUMERIC="C" producer="main_bin" version="7.4.0" root="/home/jtpfevaa/projects/GUILLER/kdenlive">
  <profile frame_rate_num="30" sample_aspect_num="1" display_aspect_den="534" colorspace="709" progressive="1" description="800x534 30.00fps" display_aspect_num="800" frame_rate_den="1" width="800" height="534" sample_aspect_den="1"/>
- <producer id="producer0" in="00:00:00.000" out="00:00:56.467">
-  <property name="length">1695</property>
+ <producer id="producer0" in="00:00:00.000" out="00:01:23.233">
+  <property name="length">2498</property>
   <property name="eof">pause</property>
   <property name="resource">/home/jtpfevaa/projects/GUILLER/paisajes/sendero-verde-2-SF.png</property>
   <property name="ttl">25</property>
@@ -15,7 +15,7 @@
   <property name="kdenlive:clipname"/>
   <property name="kdenlive:duration">00:00:05.000</property>
   <property name="kdenlive:folderid">-1</property>
-  <property name="kdenlive:id">5</property>
+  <property name="kdenlive:id">2</property>
   <property name="kdenlive:file_size">759650</property>
   <property name="kdenlive:file_hash">1254d40ff5970576f25e254ae2f5cada</property>
  </producer>
@@ -23,6 +23,10 @@
   <property name="length">150</property>
   <property name="eof">pause</property>
   <property name="resource">/home/jtpfevaa/projects/GUILLER/gif/animaker/videos/gif/mip2_walkmn-SR.gif</property>
+  <property name="audio_index">-1</property>
+  <property name="video_index">0</property>
+  <property name="mute_on_pause">0</property>
+  <property name="mlt_service">avformat-novalidate</property>
   <property name="meta.media.nb_streams">1</property>
   <property name="meta.media.0.stream.type">video</property>
   <property name="meta.media.0.stream.frame_rate">10</property>
@@ -40,10 +44,6 @@
   <property name="meta.media.sample_aspect_num">1</property>
   <property name="meta.media.sample_aspect_den">1</property>
   <property name="aspect_ratio">1</property>
-  <property name="audio_index">-1</property>
-  <property name="video_index">0</property>
-  <property name="mute_on_pause">0</property>
-  <property name="mlt_service">avformat-novalidate</property>
   <property name="kdenlive:clipname"/>
   <property name="kdenlive:folderid">-1</property>
   <property name="meta.media.frame_rate_num">10</property>
@@ -54,22 +54,22 @@
   <property name="meta.media.width">180</property>
   <property name="meta.media.height">330</property>
   <property name="meta.media.color_range">mpeg</property>
-  <property name="kdenlive:id">6</property>
+  <property name="kdenlive:id">3</property>
   <property name="kdenlive:file_size">875305</property>
   <property name="kdenlive:file_hash">efe0cd0587027c7f6575c75177fabbe6</property>
   <property name="meta.media.top_field_first">0</property>
   <property name="meta.media.progressive">1</property>
  </producer>
- <producer id="producer2" in="00:00:00.000" out="00:00:02.567">
-  <property name="length">78</property>
+ <producer id="producer2" in="00:00:00.000" out="00:00:02.067">
+  <property name="length">63</property>
   <property name="eof">pause</property>
-  <property name="resource">/home/jtpfevaa/projects/GUILLER/gif/animaker/videos/gif/mip2_walkwm-SR.gif</property>
+  <property name="resource">/home/jtpfevaa/projects/GUILLER/gif/animaker/videos/gif/gifs3_dogwalk-SR.gif</property>
   <property name="meta.media.nb_streams">1</property>
   <property name="meta.media.0.stream.type">video</property>
   <property name="meta.media.0.stream.frame_rate">10</property>
   <property name="meta.media.0.stream.sample_aspect_ratio">0</property>
-  <property name="meta.media.0.codec.width">200</property>
-  <property name="meta.media.0.codec.height">330</property>
+  <property name="meta.media.0.codec.width">190</property>
+  <property name="meta.media.0.codec.height">150</property>
   <property name="meta.media.0.codec.rotate">0</property>
   <property name="meta.media.0.codec.pix_fmt">bgra</property>
   <property name="meta.media.0.codec.sample_aspect_ratio">0</property>
@@ -92,55 +92,101 @@
   <property name="meta.media.colorspace">601</property>
   <property name="meta.media.color_trc">2</property>
   <property name="meta.media.has_b_frames">0</property>
-  <property name="meta.media.width">200</property>
-  <property name="meta.media.height">330</property>
+  <property name="meta.media.width">190</property>
+  <property name="meta.media.height">150</property>
   <property name="meta.media.color_range">mpeg</property>
-  <property name="kdenlive:id">7</property>
-  <property name="kdenlive:file_size">463066</property>
-  <property name="kdenlive:file_hash">143ac6318a9a1dd9cd67fa5b6086a4b8</property>
+  <property name="kdenlive:id">8</property>
+  <property name="kdenlive:file_size">179017</property>
+  <property name="kdenlive:file_hash">300afb651a2bfa14bb44e620d9ac1aa4</property>
   <property name="meta.media.top_field_first">0</property>
   <property name="meta.media.progressive">1</property>
  </producer>
- <producer id="producer3" in="00:00:00.000" out="00:00:04.967">
-  <property name="length">00:00:05.000</property>
+ <producer id="producer3" in="00:00:00.000" out="00:00:02.767">
+  <property name="length">84</property>
   <property name="eof">pause</property>
-  <property name="resource">/home/jtpfevaa/projects/GUILLER/gif/animaker/videos/gif/gifs6_cat-SR.gif</property>
-  <property name="ttl">25</property>
-  <property name="aspect_ratio">1</property>
-  <property name="progressive">1</property>
+  <property name="resource">/home/jtpfevaa/projects/GUILLER/gif/animaker/videos/flash_pet.gif</property>
+  <property name="meta.media.nb_streams">1</property>
+  <property name="meta.media.0.stream.type">video</property>
+  <property name="meta.media.0.stream.frame_rate">10</property>
+  <property name="meta.media.0.stream.sample_aspect_ratio">0</property>
+  <property name="meta.media.0.codec.width">190</property>
+  <property name="meta.media.0.codec.height">150</property>
+  <property name="meta.media.0.codec.rotate">0</property>
+  <property name="meta.media.0.codec.pix_fmt">bgra</property>
+  <property name="meta.media.0.codec.sample_aspect_ratio">0</property>
+  <property name="meta.media.0.codec.colorspace">601</property>
+  <property name="meta.media.0.codec.name">gif</property>
+  <property name="meta.media.0.codec.long_name">GIF (Graphics Interchange Format)</property>
+  <property name="meta.media.0.codec.bit_rate">0</property>
   <property name="seekable">1</property>
-  <property name="meta.media.width">160</property>
-  <property name="meta.media.height">160</property>
-  <property name="mlt_service">qimage</property>
-  <property name="kdenlive:clipname"/>
-  <property name="kdenlive:duration">00:00:05.000</property>
-  <property name="kdenlive:folderid">-1</property>
-  <property name="kdenlive:id">8</property>
-  <property name="kdenlive:file_size">7831</property>
-  <property name="kdenlive:file_hash">fea0c5755b9b1b94ab5dec840311ed23</property>
- </producer>
- <producer id="producer4" in="00:00:00.000" out="00:00:04.967">
-  <property name="length">00:00:05.000</property>
-  <property name="eof">pause</property>
-  <property name="resource">/home/jtpfevaa/projects/GUILLER/gif/animaker/videos/gif/gifs6_alien2-SR.gif</property>
-  <property name="ttl">25</property>
+  <property name="meta.media.sample_aspect_num">1</property>
+  <property name="meta.media.sample_aspect_den">1</property>
   <property name="aspect_ratio">1</property>
-  <property name="progressive">1</property>
-  <property name="seekable">1</property>
-  <property name="meta.media.width">140</property>
-  <property name="meta.media.height">160</property>
-  <property name="mlt_service">qimage</property>
+  <property name="audio_index">-1</property>
+  <property name="video_index">0</property>
+  <property name="mute_on_pause">0</property>
+  <property name="mlt_service">avformat-novalidate</property>
   <property name="kdenlive:clipname"/>
-  <property name="kdenlive:duration">00:00:05.000</property>
   <property name="kdenlive:folderid">-1</property>
+  <property name="meta.media.frame_rate_num">10</property>
+  <property name="meta.media.frame_rate_den">1</property>
+  <property name="meta.media.colorspace">601</property>
+  <property name="meta.media.color_trc">2</property>
+  <property name="meta.media.has_b_frames">0</property>
+  <property name="meta.media.width">190</property>
+  <property name="meta.media.height">150</property>
+  <property name="meta.media.color_range">mpeg</property>
   <property name="kdenlive:id">9</property>
-  <property name="kdenlive:file_size">10986</property>
-  <property name="kdenlive:file_hash">ce54f4a58f812eda8ac4f73d83a89a97</property>
+  <property name="kdenlive:file_size">269443</property>
+  <property name="kdenlive:file_hash">d9ad889a8b70958c48f2c5c0033ee0c0</property>
+  <property name="meta.media.top_field_first">0</property>
+  <property name="meta.media.progressive">1</property>
+ </producer>
+ <producer id="producer4" in="00:00:00.000" out="00:00:05.967">
+  <property name="length">180</property>
+  <property name="eof">pause</property>
+  <property name="resource">/home/jtpfevaa/projects/GUILLER/gif/animaker/videos/gif/gifs5a_wlkwm2-SR.gif</property>
+  <property name="meta.media.nb_streams">1</property>
+  <property name="meta.media.0.stream.type">video</property>
+  <property name="meta.media.0.stream.frame_rate">10</property>
+  <property name="meta.media.0.stream.sample_aspect_ratio">0</property>
+  <property name="meta.media.0.codec.width">215</property>
+  <property name="meta.media.0.codec.height">475</property>
+  <property name="meta.media.0.codec.rotate">0</property>
+  <property name="meta.media.0.codec.pix_fmt">bgra</property>
+  <property name="meta.media.0.codec.sample_aspect_ratio">0</property>
+  <property name="meta.media.0.codec.colorspace">601</property>
+  <property name="meta.media.0.codec.name">gif</property>
+  <property name="meta.media.0.codec.long_name">GIF (Graphics Interchange Format)</property>
+  <property name="meta.media.0.codec.bit_rate">0</property>
+  <property name="seekable">1</property>
+  <property name="meta.media.sample_aspect_num">1</property>
+  <property name="meta.media.sample_aspect_den">1</property>
+  <property name="aspect_ratio">1</property>
+  <property name="audio_index">-1</property>
+  <property name="video_index">0</property>
+  <property name="mute_on_pause">0</property>
+  <property name="mlt_service">avformat-novalidate</property>
+  <property name="kdenlive:clipname"/>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="meta.media.frame_rate_num">10</property>
+  <property name="meta.media.frame_rate_den">1</property>
+  <property name="meta.media.colorspace">601</property>
+  <property name="meta.media.color_trc">2</property>
+  <property name="meta.media.has_b_frames">0</property>
+  <property name="meta.media.width">215</property>
+  <property name="meta.media.height">475</property>
+  <property name="meta.media.color_range">mpeg</property>
+  <property name="kdenlive:id">10</property>
+  <property name="kdenlive:file_size">2091570</property>
+  <property name="kdenlive:file_hash">1a4b4c0ac60149321f49c651ad141326</property>
+  <property name="meta.media.top_field_first">0</property>
+  <property name="meta.media.progressive">1</property>
  </producer>
  <producer id="producer5" in="00:00:00.000" out="00:00:14.767">
   <property name="length">444</property>
   <property name="eof">pause</property>
-  <property name="resource">/home/jtpfevaa/projects/GUILLER/gif/animaker/videos/gif/gifs6_petmn-SR.gif</property>
+  <property name="resource">/home/jtpfevaa/projects/GUILLER/gif/animaker/videos/petmn-SS.gif</property>
   <property name="meta.media.nb_streams">1</property>
   <property name="meta.media.0.stream.type">video</property>
   <property name="meta.media.0.stream.frame_rate">10</property>
@@ -172,14 +218,145 @@
   <property name="meta.media.width">300</property>
   <property name="meta.media.height">410</property>
   <property name="meta.media.color_range">mpeg</property>
-  <property name="kdenlive:id">10</property>
-  <property name="kdenlive:file_size">4632582</property>
-  <property name="kdenlive:file_hash">7acaa3e9525864dfea1b914276066b4e</property>
+  <property name="kdenlive:id">11</property>
+  <property name="kdenlive:file_size">3867363</property>
+  <property name="kdenlive:file_hash">bae5ec9c3157eaeda83e31e8e5d4e515</property>
   <property name="meta.media.top_field_first">0</property>
   <property name="meta.media.progressive">1</property>
  </producer>
+ <producer id="producer6" in="00:00:00.000" out="00:00:04.967">
+  <property name="length">00:00:05.000</property>
+  <property name="eof">pause</property>
+  <property name="resource">/home/jtpfevaa/projects/GUILLER/gif/animaker/videos/gifs3_dogwalk-SR.png</property>
+  <property name="ttl">25</property>
+  <property name="aspect_ratio">1</property>
+  <property name="progressive">1</property>
+  <property name="seekable">1</property>
+  <property name="meta.media.width">190</property>
+  <property name="meta.media.height">150</property>
+  <property name="mlt_service">qimage</property>
+  <property name="kdenlive:clipname"/>
+  <property name="kdenlive:duration">00:00:05.000</property>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="kdenlive:id">12</property>
+  <property name="kdenlive:file_size">29375</property>
+  <property name="kdenlive:file_hash">a22b42cd51a993fb86c2fef96e90c371</property>
+ </producer>
+ <producer id="producer7" in="00:00:00.000" out="00:00:25.600">
+  <property name="length">769</property>
+  <property name="eof">pause</property>
+  <property name="resource">/home/jtpfevaa/projects/GUILLER/gif/animaker/videos/gif/paseando-gui-aurora.png</property>
+  <property name="ttl">25</property>
+  <property name="aspect_ratio">1</property>
+  <property name="progressive">1</property>
+  <property name="seekable">1</property>
+  <property name="meta.media.width">500</property>
+  <property name="meta.media.height">330</property>
+  <property name="mlt_service">qimage</property>
+  <property name="kdenlive:clipname"/>
+  <property name="kdenlive:duration">00:00:05.000</property>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="kdenlive:id">13</property>
+  <property name="kdenlive:file_size">85416</property>
+  <property name="kdenlive:file_hash">1b0d80c7e69eb2176e2425235b86edcc</property>
+ </producer>
+ <producer id="producer8" in="00:00:00.000" out="00:00:04.967">
+  <property name="length">00:00:05.000</property>
+  <property name="eof">pause</property>
+  <property name="resource">/home/jtpfevaa/projects/GUILLER/gif/animaker/videos/gif/mip1_wavemn-001-SR.png</property>
+  <property name="ttl">25</property>
+  <property name="aspect_ratio">1</property>
+  <property name="progressive">1</property>
+  <property name="seekable">1</property>
+  <property name="meta.media.width">225</property>
+  <property name="meta.media.height">340</property>
+  <property name="mlt_service">qimage</property>
+  <property name="kdenlive:clipname"/>
+  <property name="kdenlive:duration">00:00:05.000</property>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="kdenlive:id">14</property>
+  <property name="kdenlive:file_size">37583</property>
+  <property name="kdenlive:file_hash">0bcb7c5b4fc7f3c1c37a2fa3e1fa0d65</property>
+ </producer>
+ <producer id="producer9" in="00:00:00.000" out="00:00:27.600">
+  <property name="length">829</property>
+  <property name="eof">pause</property>
+  <property name="resource">/home/jtpfevaa/projects/GUILLER/gif/animaker/videos/gif/gifs5a_wlkwm2-last-SR.png</property>
+  <property name="ttl">25</property>
+  <property name="aspect_ratio">1</property>
+  <property name="progressive">1</property>
+  <property name="seekable">1</property>
+  <property name="meta.media.width">215</property>
+  <property name="meta.media.height">475</property>
+  <property name="mlt_service">qimage</property>
+  <property name="kdenlive:clipname"/>
+  <property name="kdenlive:duration">00:00:05.000</property>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="kdenlive:id">15</property>
+  <property name="kdenlive:file_size">73522</property>
+  <property name="kdenlive:file_hash">a114aa9ac219b0dade73cdbfd017c270</property>
+ </producer>
+ <producer id="producer10" in="00:00:00.000" out="00:00:01.967">
+  <property name="length">60</property>
+  <property name="eof">pause</property>
+  <property name="resource">/home/jtpfevaa/projects/GUILLER/gif/animaker/videos/gif/gifs3_dogrunn-SR.gif</property>
+  <property name="meta.media.nb_streams">1</property>
+  <property name="meta.media.0.stream.type">video</property>
+  <property name="meta.media.0.stream.frame_rate">10</property>
+  <property name="meta.media.0.stream.sample_aspect_ratio">0</property>
+  <property name="meta.media.0.codec.width">590</property>
+  <property name="meta.media.0.codec.height">364</property>
+  <property name="meta.media.0.codec.rotate">0</property>
+  <property name="meta.media.0.codec.pix_fmt">bgra</property>
+  <property name="meta.media.0.codec.sample_aspect_ratio">0</property>
+  <property name="meta.media.0.codec.colorspace">601</property>
+  <property name="meta.media.0.codec.name">gif</property>
+  <property name="meta.media.0.codec.long_name">GIF (Graphics Interchange Format)</property>
+  <property name="meta.media.0.codec.bit_rate">0</property>
+  <property name="seekable">1</property>
+  <property name="meta.media.sample_aspect_num">1</property>
+  <property name="meta.media.sample_aspect_den">1</property>
+  <property name="aspect_ratio">1</property>
+  <property name="audio_index">-1</property>
+  <property name="video_index">0</property>
+  <property name="mute_on_pause">0</property>
+  <property name="mlt_service">avformat-novalidate</property>
+  <property name="kdenlive:clipname"/>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="meta.media.frame_rate_num">10</property>
+  <property name="meta.media.frame_rate_den">1</property>
+  <property name="meta.media.colorspace">601</property>
+  <property name="meta.media.color_trc">2</property>
+  <property name="meta.media.has_b_frames">0</property>
+  <property name="meta.media.width">590</property>
+  <property name="meta.media.height">364</property>
+  <property name="meta.media.color_range">mpeg</property>
+  <property name="kdenlive:id">16</property>
+  <property name="kdenlive:file_size">610640</property>
+  <property name="kdenlive:file_hash">430be697bf5eb8822a2597bec3dbbd78</property>
+  <property name="meta.media.top_field_first">0</property>
+  <property name="meta.media.progressive">1</property>
+ </producer>
+ <producer id="producer11" in="00:00:00.000" out="00:00:04.967">
+  <property name="length">00:00:05.000</property>
+  <property name="eof">pause</property>
+  <property name="resource">/home/jtpfevaa/projects/GUILLER/gif/animaker/videos/gif/gifs6_alien2-SR.gif</property>
+  <property name="ttl">25</property>
+  <property name="aspect_ratio">1</property>
+  <property name="progressive">1</property>
+  <property name="seekable">1</property>
+  <property name="meta.media.width">140</property>
+  <property name="meta.media.height">160</property>
+  <property name="mlt_service">qimage</property>
+  <property name="kdenlive:clipname"/>
+  <property name="kdenlive:duration">00:00:05.000</property>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="kdenlive:id">17</property>
+  <property name="kdenlive:file_size">10986</property>
+  <property name="kdenlive:file_hash">ce54f4a58f812eda8ac4f73d83a89a97</property>
+ </producer>
  <playlist id="main_bin">
-  <property name="kdenlive:docproperties.activeTrack">3</property>
+  <property name="kdenlive:docproperties.activeTrack">5</property>
   <property name="kdenlive:docproperties.audioChannels">2</property>
   <property name="kdenlive:docproperties.audioTarget">-1</property>
   <property name="kdenlive:docproperties.disablepreview">0</property>
@@ -190,8 +367,156 @@
   <property name="kdenlive:docproperties.externalproxyparams"/>
   <property name="kdenlive:docproperties.generateimageproxy">0</property>
   <property name="kdenlive:docproperties.generateproxy">0</property>
+  <property name="kdenlive:docproperties.groups">[
+    {
+        "children": [
+            {
+                "data": "5:829",
+                "leaf": "clip",
+                "type": "Leaf"
+            },
+            {
+                "data": "5:409",
+                "leaf": "clip",
+                "type": "Leaf"
+            },
+            {
+                "data": "5:469",
+                "leaf": "clip",
+                "type": "Leaf"
+            },
+            {
+                "data": "5:649",
+                "leaf": "clip",
+                "type": "Leaf"
+            },
+            {
+                "data": "5:529",
+                "leaf": "clip",
+                "type": "Leaf"
+            },
+            {
+                "data": "5:589",
+                "leaf": "clip",
+                "type": "Leaf"
+            },
+            {
+                "data": "5:709",
+                "leaf": "clip",
+                "type": "Leaf"
+            },
+            {
+                "data": "5:769",
+                "leaf": "clip",
+                "type": "Leaf"
+            }
+        ],
+        "type": "Normal"
+    },
+    {
+        "children": [
+            {
+                "data": "5:952",
+                "leaf": "clip",
+                "type": "Leaf"
+            },
+            {
+                "data": "5:1519",
+                "leaf": "clip",
+                "type": "Leaf"
+            },
+            {
+                "data": "5:889",
+                "leaf": "clip",
+                "type": "Leaf"
+            },
+            {
+                "data": "5:1015",
+                "leaf": "clip",
+                "type": "Leaf"
+            },
+            {
+                "data": "5:1078",
+                "leaf": "clip",
+                "type": "Leaf"
+            },
+            {
+                "data": "5:1204",
+                "leaf": "clip",
+                "type": "Leaf"
+            },
+            {
+                "data": "5:1141",
+                "leaf": "clip",
+                "type": "Leaf"
+            },
+            {
+                "data": "5:1267",
+                "leaf": "clip",
+                "type": "Leaf"
+            },
+            {
+                "data": "5:1330",
+                "leaf": "clip",
+                "type": "Leaf"
+            },
+            {
+                "data": "5:1393",
+                "leaf": "clip",
+                "type": "Leaf"
+            },
+            {
+                "data": "5:1456",
+                "leaf": "clip",
+                "type": "Leaf"
+            }
+        ],
+        "type": "Normal"
+    },
+    {
+        "children": [
+            {
+                "data": "5:1732",
+                "leaf": "clip",
+                "type": "Leaf"
+            },
+            {
+                "data": "5:1816",
+                "leaf": "clip",
+                "type": "Leaf"
+            },
+            {
+                "data": "5:1900",
+                "leaf": "clip",
+                "type": "Leaf"
+            }
+        ],
+        "type": "Normal"
+    },
+    {
+        "children": [
+            {
+                "data": "5:2134",
+                "leaf": "clip",
+                "type": "Leaf"
+            },
+            {
+                "data": "5:2218",
+                "leaf": "clip",
+                "type": "Leaf"
+            },
+            {
+                "data": "5:2302",
+                "leaf": "clip",
+                "type": "Leaf"
+            }
+        ],
+        "type": "Normal"
+    }
+]
+</property>
   <property name="kdenlive:docproperties.kdenliveversion">21.12.3</property>
-  <property name="kdenlive:docproperties.position">1166</property>
+  <property name="kdenlive:docproperties.position">2498</property>
   <property name="kdenlive:docproperties.previewextension"/>
   <property name="kdenlive:docproperties.previewparameters"/>
   <property name="kdenlive:docproperties.profile">/home/jtpfevaa/.local/share/kdenlive/profiles/customprofile29</property>
@@ -201,28 +526,31 @@
   <property name="kdenlive:docproperties.proxyminsize">1000</property>
   <property name="kdenlive:docproperties.proxyparams"/>
   <property name="kdenlive:docproperties.proxyresize">640</property>
-  <property name="kdenlive:docproperties.scrollPos">0</property>
+  <property name="kdenlive:docproperties.scrollPos">353</property>
   <property name="kdenlive:docproperties.seekOffset">30000</property>
   <property name="kdenlive:docproperties.version">1.04</property>
   <property name="kdenlive:docproperties.verticalzoom">1</property>
-  <property name="kdenlive:docproperties.videoTarget">2</property>
+  <property name="kdenlive:docproperties.videoTarget">5</property>
   <property name="kdenlive:docproperties.zonein">0</property>
   <property name="kdenlive:docproperties.zoneout">75</property>
   <property name="kdenlive:docproperties.zoom">8</property>
   <property name="kdenlive:expandedFolders"/>
   <property name="kdenlive:documentnotes"/>
-  <property name="kdenlive:docproperties.groups">[
-]
-</property>
   <property name="xml_retain">1</property>
-  <entry producer="producer0" in="00:00:00.000" out="00:00:04.967"/>
+  <entry producer="producer0" in="00:00:00.000" out="00:00:56.467"/>
   <entry producer="producer1" in="00:00:00.000" out="00:00:04.967"/>
-  <entry producer="producer2" in="00:00:00.000" out="00:00:02.567"/>
-  <entry producer="producer3" in="00:00:00.000" out="00:00:04.967"/>
-  <entry producer="producer4" in="00:00:00.000" out="00:00:04.967"/>
+  <entry producer="producer2" in="00:00:00.000" out="00:00:02.067"/>
+  <entry producer="producer3" in="00:00:00.000" out="00:00:02.767"/>
+  <entry producer="producer4" in="00:00:00.000" out="00:00:05.967"/>
   <entry producer="producer5" in="00:00:00.000" out="00:00:14.767"/>
+  <entry producer="producer6" in="00:00:00.000" out="00:00:04.967"/>
+  <entry producer="producer7" in="00:00:00.000" out="00:00:04.967"/>
+  <entry producer="producer8" in="00:00:00.000" out="00:00:04.967"/>
+  <entry producer="producer9" in="00:00:00.000" out="00:00:04.967"/>
+  <entry producer="producer10" in="00:00:00.000" out="00:00:01.967"/>
+  <entry producer="producer11" in="00:00:00.000" out="00:00:04.967"/>
  </playlist>
- <producer id="black_track" in="00:00:00.000" out="00:17:18.867">
+ <producer id="black_track" in="00:00:00.000" out="00:18:03.267">
   <property name="length">2147483647</property>
   <property name="eof">continue</property>
   <property name="resource">black</property>
@@ -302,12 +630,12 @@
   </filter>
  </tractor>
  <playlist id="playlist4">
-  <entry producer="producer0" in="00:00:00.000" out="00:00:38.833">
-   <property name="kdenlive:id">5</property>
+  <entry producer="producer0" in="00:00:00.000" out="00:01:23.233">
+   <property name="kdenlive:id">2</property>
   </entry>
  </playlist>
  <playlist id="playlist5"/>
- <tractor id="tractor2" in="00:00:00.000" out="00:00:38.833">
+ <tractor id="tractor2" in="00:00:00.000" out="00:01:23.233">
   <property name="kdenlive:trackheight">69</property>
   <property name="kdenlive:timeline_active">1</property>
   <property name="kdenlive:collapsed">0</property>
@@ -316,10 +644,21 @@
   <track hide="audio" producer="playlist4"/>
   <track hide="audio" producer="playlist5"/>
  </tractor>
- <producer id="producer6" in="00:00:00.000" out="00:00:14.767">
-  <property name="length">444</property>
+ <playlist id="playlist6"/>
+ <playlist id="playlist7"/>
+ <tractor id="tractor3" in="00:00:00.000">
+  <property name="kdenlive:trackheight">69</property>
+  <property name="kdenlive:timeline_active">1</property>
+  <property name="kdenlive:collapsed">0</property>
+  <property name="kdenlive:thumbs_format"/>
+  <property name="kdenlive:audio_rec"/>
+  <track hide="audio" producer="playlist6"/>
+  <track hide="audio" producer="playlist7"/>
+ </tractor>
+ <producer id="producer12" in="00:00:00.000" out="00:00:05.967">
+  <property name="length">180</property>
   <property name="eof">pause</property>
-  <property name="resource">/home/jtpfevaa/projects/GUILLER/gif/animaker/videos/gif/gifs6_petmn-SR.gif</property>
+  <property name="resource">/home/jtpfevaa/projects/GUILLER/gif/animaker/videos/gif/gifs5a_wlkwm2-SR.gif</property>
   <property name="audio_index">-1</property>
   <property name="video_index">0</property>
   <property name="mute_on_pause">0</property>
@@ -329,8 +668,355 @@
   <property name="kdenlive:clipname"/>
   <property name="kdenlive:folderid">-1</property>
   <property name="kdenlive:id">10</property>
-  <property name="kdenlive:file_size">4632582</property>
-  <property name="kdenlive:file_hash">7acaa3e9525864dfea1b914276066b4e</property>
+  <property name="kdenlive:file_size">2091570</property>
+  <property name="kdenlive:file_hash">1a4b4c0ac60149321f49c651ad141326</property>
+  <property name="xml">was here</property>
+  <property name="meta.media.nb_streams">1</property>
+  <property name="meta.media.0.stream.type">video</property>
+  <property name="meta.media.0.stream.frame_rate">10</property>
+  <property name="meta.media.0.stream.sample_aspect_ratio">0</property>
+  <property name="meta.media.0.codec.width">215</property>
+  <property name="meta.media.0.codec.height">475</property>
+  <property name="meta.media.0.codec.rotate">0</property>
+  <property name="meta.media.0.codec.pix_fmt">bgra</property>
+  <property name="meta.media.0.codec.sample_aspect_ratio">0</property>
+  <property name="meta.media.0.codec.colorspace">601</property>
+  <property name="meta.media.0.codec.name">gif</property>
+  <property name="meta.media.0.codec.long_name">GIF (Graphics Interchange Format)</property>
+  <property name="meta.media.0.codec.bit_rate">0</property>
+  <property name="meta.media.sample_aspect_num">1</property>
+  <property name="meta.media.sample_aspect_den">1</property>
+  <property name="meta.media.frame_rate_num">10</property>
+  <property name="meta.media.frame_rate_den">1</property>
+  <property name="meta.media.colorspace">601</property>
+  <property name="meta.media.color_trc">2</property>
+  <property name="meta.media.has_b_frames">0</property>
+  <property name="meta.media.width">215</property>
+  <property name="meta.media.height">475</property>
+  <property name="meta.media.color_range">mpeg</property>
+  <property name="meta.media.top_field_first">0</property>
+  <property name="meta.media.progressive">1</property>
+  <property name="set.test_audio">1</property>
+  <property name="set.test_image">0</property>
+ </producer>
+ <playlist id="playlist8">
+  <entry producer="producer7" in="00:00:00.000" out="00:00:25.600">
+   <property name="kdenlive:id">13</property>
+  </entry>
+  <entry producer="producer12" in="00:00:00.000" out="00:00:05.967">
+   <property name="kdenlive:id">10</property>
+  </entry>
+  <entry producer="producer12" in="00:00:00.000" out="00:00:05.967">
+   <property name="kdenlive:id">10</property>
+  </entry>
+  <entry producer="producer12" in="00:00:00.000" out="00:00:05.967">
+   <property name="kdenlive:id">10</property>
+  </entry>
+  <entry producer="producer12" in="00:00:00.000" out="00:00:05.967">
+   <property name="kdenlive:id">10</property>
+  </entry>
+  <entry producer="producer12" in="00:00:00.000" out="00:00:05.967">
+   <property name="kdenlive:id">10</property>
+  </entry>
+  <entry producer="producer9" in="00:00:00.000" out="00:00:27.600">
+   <property name="kdenlive:id">15</property>
+  </entry>
+ </playlist>
+ <playlist id="playlist9"/>
+ <tractor id="tractor4" in="00:00:00.000" out="00:01:23.233">
+  <property name="kdenlive:trackheight">69</property>
+  <property name="kdenlive:timeline_active">1</property>
+  <track producer="playlist8"/>
+  <track producer="playlist9"/>
+ </tractor>
+ <producer id="producer13" in="00:00:00.000" out="00:00:01.967">
+  <property name="length">60</property>
+  <property name="eof">pause</property>
+  <property name="resource">/home/jtpfevaa/projects/GUILLER/gif/animaker/videos/gif/gifs3_dogrunn-SR.gif</property>
+  <property name="audio_index">-1</property>
+  <property name="video_index">0</property>
+  <property name="mute_on_pause">0</property>
+  <property name="mlt_service">avformat-novalidate</property>
+  <property name="seekable">1</property>
+  <property name="aspect_ratio">1</property>
+  <property name="kdenlive:clipname"/>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="kdenlive:id">16</property>
+  <property name="kdenlive:file_size">610640</property>
+  <property name="kdenlive:file_hash">430be697bf5eb8822a2597bec3dbbd78</property>
+  <property name="xml">was here</property>
+  <property name="meta.media.nb_streams">1</property>
+  <property name="meta.media.0.stream.type">video</property>
+  <property name="meta.media.0.stream.frame_rate">10</property>
+  <property name="meta.media.0.stream.sample_aspect_ratio">0</property>
+  <property name="meta.media.0.codec.width">590</property>
+  <property name="meta.media.0.codec.height">364</property>
+  <property name="meta.media.0.codec.rotate">0</property>
+  <property name="meta.media.0.codec.pix_fmt">bgra</property>
+  <property name="meta.media.0.codec.sample_aspect_ratio">0</property>
+  <property name="meta.media.0.codec.colorspace">601</property>
+  <property name="meta.media.0.codec.name">gif</property>
+  <property name="meta.media.0.codec.long_name">GIF (Graphics Interchange Format)</property>
+  <property name="meta.media.0.codec.bit_rate">0</property>
+  <property name="meta.media.sample_aspect_num">1</property>
+  <property name="meta.media.sample_aspect_den">1</property>
+  <property name="meta.media.frame_rate_num">10</property>
+  <property name="meta.media.frame_rate_den">1</property>
+  <property name="meta.media.colorspace">601</property>
+  <property name="meta.media.color_trc">2</property>
+  <property name="meta.media.has_b_frames">0</property>
+  <property name="meta.media.width">590</property>
+  <property name="meta.media.height">364</property>
+  <property name="meta.media.color_range">mpeg</property>
+  <property name="meta.media.top_field_first">0</property>
+  <property name="meta.media.progressive">1</property>
+  <property name="set.test_audio">1</property>
+  <property name="set.test_image">0</property>
+ </producer>
+ <producer id="producer14" in="00:00:00.000" out="00:00:02.067">
+  <property name="length">63</property>
+  <property name="eof">pause</property>
+  <property name="resource">/home/jtpfevaa/projects/GUILLER/gif/animaker/videos/gif/gifs3_dogwalk-SR.gif</property>
+  <property name="audio_index">-1</property>
+  <property name="video_index">0</property>
+  <property name="mute_on_pause">0</property>
+  <property name="mlt_service">avformat-novalidate</property>
+  <property name="seekable">1</property>
+  <property name="aspect_ratio">1</property>
+  <property name="kdenlive:clipname"/>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="kdenlive:id">8</property>
+  <property name="kdenlive:file_size">179017</property>
+  <property name="kdenlive:file_hash">300afb651a2bfa14bb44e620d9ac1aa4</property>
+  <property name="xml">was here</property>
+  <property name="meta.media.nb_streams">1</property>
+  <property name="meta.media.0.stream.type">video</property>
+  <property name="meta.media.0.stream.frame_rate">10</property>
+  <property name="meta.media.0.stream.sample_aspect_ratio">0</property>
+  <property name="meta.media.0.codec.width">190</property>
+  <property name="meta.media.0.codec.height">150</property>
+  <property name="meta.media.0.codec.rotate">0</property>
+  <property name="meta.media.0.codec.pix_fmt">bgra</property>
+  <property name="meta.media.0.codec.sample_aspect_ratio">0</property>
+  <property name="meta.media.0.codec.colorspace">601</property>
+  <property name="meta.media.0.codec.name">gif</property>
+  <property name="meta.media.0.codec.long_name">GIF (Graphics Interchange Format)</property>
+  <property name="meta.media.0.codec.bit_rate">0</property>
+  <property name="meta.media.sample_aspect_num">1</property>
+  <property name="meta.media.sample_aspect_den">1</property>
+  <property name="meta.media.frame_rate_num">10</property>
+  <property name="meta.media.frame_rate_den">1</property>
+  <property name="meta.media.colorspace">601</property>
+  <property name="meta.media.color_trc">2</property>
+  <property name="meta.media.has_b_frames">0</property>
+  <property name="meta.media.width">190</property>
+  <property name="meta.media.height">150</property>
+  <property name="meta.media.color_range">mpeg</property>
+  <property name="meta.media.top_field_first">0</property>
+  <property name="meta.media.progressive">1</property>
+  <property name="set.test_audio">1</property>
+  <property name="set.test_image">0</property>
+ </producer>
+ <producer id="producer15" in="00:00:00.000" out="00:00:02.767">
+  <property name="length">84</property>
+  <property name="eof">pause</property>
+  <property name="resource">/home/jtpfevaa/projects/GUILLER/gif/animaker/videos/flash_pet.gif</property>
+  <property name="audio_index">-1</property>
+  <property name="video_index">0</property>
+  <property name="mute_on_pause">0</property>
+  <property name="mlt_service">avformat-novalidate</property>
+  <property name="seekable">1</property>
+  <property name="aspect_ratio">1</property>
+  <property name="kdenlive:clipname"/>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="kdenlive:id">9</property>
+  <property name="kdenlive:file_size">269443</property>
+  <property name="kdenlive:file_hash">d9ad889a8b70958c48f2c5c0033ee0c0</property>
+  <property name="xml">was here</property>
+  <property name="meta.media.nb_streams">1</property>
+  <property name="meta.media.0.stream.type">video</property>
+  <property name="meta.media.0.stream.frame_rate">10</property>
+  <property name="meta.media.0.stream.sample_aspect_ratio">0</property>
+  <property name="meta.media.0.codec.width">190</property>
+  <property name="meta.media.0.codec.height">150</property>
+  <property name="meta.media.0.codec.rotate">0</property>
+  <property name="meta.media.0.codec.pix_fmt">bgra</property>
+  <property name="meta.media.0.codec.sample_aspect_ratio">0</property>
+  <property name="meta.media.0.codec.colorspace">601</property>
+  <property name="meta.media.0.codec.name">gif</property>
+  <property name="meta.media.0.codec.long_name">GIF (Graphics Interchange Format)</property>
+  <property name="meta.media.0.codec.bit_rate">0</property>
+  <property name="meta.media.sample_aspect_num">1</property>
+  <property name="meta.media.sample_aspect_den">1</property>
+  <property name="meta.media.frame_rate_num">10</property>
+  <property name="meta.media.frame_rate_den">1</property>
+  <property name="meta.media.colorspace">601</property>
+  <property name="meta.media.color_trc">2</property>
+  <property name="meta.media.has_b_frames">0</property>
+  <property name="meta.media.width">190</property>
+  <property name="meta.media.height">150</property>
+  <property name="meta.media.color_range">mpeg</property>
+  <property name="meta.media.top_field_first">0</property>
+  <property name="meta.media.progressive">1</property>
+  <property name="set.test_audio">1</property>
+  <property name="set.test_image">0</property>
+ </producer>
+ <playlist id="playlist10">
+  <blank length="00:00:13.633"/>
+  <entry producer="producer13" in="00:00:00.000" out="00:00:01.967">
+   <property name="kdenlive:id">16</property>
+  </entry>
+  <entry producer="producer13" in="00:00:00.000" out="00:00:01.967">
+   <property name="kdenlive:id">16</property>
+  </entry>
+  <entry producer="producer13" in="00:00:00.000" out="00:00:01.967">
+   <property name="kdenlive:id">16</property>
+  </entry>
+  <entry producer="producer13" in="00:00:00.000" out="00:00:01.967">
+   <property name="kdenlive:id">16</property>
+  </entry>
+  <entry producer="producer13" in="00:00:00.000" out="00:00:01.967">
+   <property name="kdenlive:id">16</property>
+  </entry>
+  <entry producer="producer13" in="00:00:00.000" out="00:00:01.967">
+   <property name="kdenlive:id">16</property>
+  </entry>
+  <entry producer="producer13" in="00:00:00.000" out="00:00:01.967">
+   <property name="kdenlive:id">16</property>
+  </entry>
+  <entry producer="producer13" in="00:00:00.000" out="00:00:01.967">
+   <property name="kdenlive:id">16</property>
+  </entry>
+  <entry producer="producer14" in="00:00:00.000" out="00:00:02.067">
+   <property name="kdenlive:id">8</property>
+  </entry>
+  <entry producer="producer14" in="00:00:00.000" out="00:00:02.067">
+   <property name="kdenlive:id">8</property>
+  </entry>
+  <entry producer="producer14" in="00:00:00.000" out="00:00:02.067">
+   <property name="kdenlive:id">8</property>
+  </entry>
+  <entry producer="producer14" in="00:00:00.000" out="00:00:02.067">
+   <property name="kdenlive:id">8</property>
+  </entry>
+  <entry producer="producer14" in="00:00:00.000" out="00:00:02.067">
+   <property name="kdenlive:id">8</property>
+  </entry>
+  <entry producer="producer14" in="00:00:00.000" out="00:00:02.067">
+   <property name="kdenlive:id">8</property>
+  </entry>
+  <entry producer="producer14" in="00:00:00.000" out="00:00:02.067">
+   <property name="kdenlive:id">8</property>
+  </entry>
+  <entry producer="producer14" in="00:00:00.000" out="00:00:02.067">
+   <property name="kdenlive:id">8</property>
+  </entry>
+  <entry producer="producer14" in="00:00:00.000" out="00:00:02.067">
+   <property name="kdenlive:id">8</property>
+  </entry>
+  <entry producer="producer14" in="00:00:00.000" out="00:00:02.067">
+   <property name="kdenlive:id">8</property>
+  </entry>
+  <entry producer="producer14" in="00:00:00.000" out="00:00:02.067">
+   <property name="kdenlive:id">8</property>
+  </entry>
+  <entry producer="producer6" in="00:00:00.000" out="00:00:04.967">
+   <property name="kdenlive:id">12</property>
+  </entry>
+  <entry producer="producer15" in="00:00:00.000" out="00:00:02.767">
+   <property name="kdenlive:id">9</property>
+  </entry>
+  <entry producer="producer15" in="00:00:00.000" out="00:00:02.767">
+   <property name="kdenlive:id">9</property>
+  </entry>
+  <entry producer="producer15" in="00:00:00.000" out="00:00:02.767">
+   <property name="kdenlive:id">9</property>
+  </entry>
+  <entry producer="producer6" in="00:00:00.000" out="00:00:04.967">
+   <property name="kdenlive:id">12</property>
+  </entry>
+  <entry producer="producer15" in="00:00:00.000" out="00:00:02.767">
+   <property name="kdenlive:id">9</property>
+  </entry>
+  <entry producer="producer15" in="00:00:00.000" out="00:00:02.767">
+   <property name="kdenlive:id">9</property>
+  </entry>
+  <entry producer="producer15" in="00:00:00.000" out="00:00:02.767">
+   <property name="kdenlive:id">9</property>
+  </entry>
+  <entry producer="producer11" in="00:00:00.000" out="00:00:03.700">
+   <property name="kdenlive:id">17</property>
+  </entry>
+ </playlist>
+ <playlist id="playlist11"/>
+ <tractor id="tractor5" in="00:00:00.000" out="00:01:23.233">
+  <property name="kdenlive:trackheight">69</property>
+  <property name="kdenlive:timeline_active">1</property>
+  <property name="kdenlive:collapsed">0</property>
+  <property name="kdenlive:thumbs_format"/>
+  <property name="kdenlive:audio_rec"/>
+  <track hide="audio" producer="playlist10"/>
+  <track hide="audio" producer="playlist11"/>
+ </tractor>
+ <producer id="producer16" in="00:00:00.000" out="00:00:04.967">
+  <property name="length">150</property>
+  <property name="eof">pause</property>
+  <property name="resource">/home/jtpfevaa/projects/GUILLER/gif/animaker/videos/gif/mip2_walkmn-SR.gif</property>
+  <property name="audio_index">-1</property>
+  <property name="video_index">0</property>
+  <property name="mute_on_pause">0</property>
+  <property name="mlt_service">avformat-novalidate</property>
+  <property name="seekable">1</property>
+  <property name="aspect_ratio">1</property>
+  <property name="kdenlive:clipname"/>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="kdenlive:id">3</property>
+  <property name="kdenlive:file_size">875305</property>
+  <property name="kdenlive:file_hash">efe0cd0587027c7f6575c75177fabbe6</property>
+  <property name="xml">was here</property>
+  <property name="meta.media.nb_streams">1</property>
+  <property name="meta.media.0.stream.type">video</property>
+  <property name="meta.media.0.stream.frame_rate">10</property>
+  <property name="meta.media.0.stream.sample_aspect_ratio">0</property>
+  <property name="meta.media.0.codec.width">180</property>
+  <property name="meta.media.0.codec.height">330</property>
+  <property name="meta.media.0.codec.rotate">0</property>
+  <property name="meta.media.0.codec.pix_fmt">bgra</property>
+  <property name="meta.media.0.codec.sample_aspect_ratio">0</property>
+  <property name="meta.media.0.codec.colorspace">601</property>
+  <property name="meta.media.0.codec.name">gif</property>
+  <property name="meta.media.0.codec.long_name">GIF (Graphics Interchange Format)</property>
+  <property name="meta.media.0.codec.bit_rate">0</property>
+  <property name="meta.media.sample_aspect_num">1</property>
+  <property name="meta.media.sample_aspect_den">1</property>
+  <property name="meta.media.frame_rate_num">10</property>
+  <property name="meta.media.frame_rate_den">1</property>
+  <property name="meta.media.colorspace">601</property>
+  <property name="meta.media.color_trc">2</property>
+  <property name="meta.media.has_b_frames">0</property>
+  <property name="meta.media.width">180</property>
+  <property name="meta.media.height">330</property>
+  <property name="meta.media.color_range">mpeg</property>
+  <property name="meta.media.top_field_first">0</property>
+  <property name="meta.media.progressive">1</property>
+  <property name="set.test_audio">1</property>
+  <property name="set.test_image">0</property>
+ </producer>
+ <producer id="producer17" in="00:00:00.000" out="00:00:14.767">
+  <property name="length">444</property>
+  <property name="eof">pause</property>
+  <property name="resource">/home/jtpfevaa/projects/GUILLER/gif/animaker/videos/petmn-SS.gif</property>
+  <property name="audio_index">-1</property>
+  <property name="video_index">0</property>
+  <property name="mute_on_pause">0</property>
+  <property name="mlt_service">avformat-novalidate</property>
+  <property name="seekable">1</property>
+  <property name="aspect_ratio">1</property>
+  <property name="kdenlive:clipname"/>
+  <property name="kdenlive:folderid">-1</property>
+  <property name="kdenlive:id">11</property>
+  <property name="kdenlive:file_size">3867363</property>
+  <property name="kdenlive:file_hash">bae5ec9c3157eaeda83e31e8e5d4e515</property>
   <property name="xml">was here</property>
   <property name="meta.media.nb_streams">1</property>
   <property name="meta.media.0.stream.type">video</property>
@@ -360,45 +1046,42 @@
   <property name="set.test_audio">1</property>
   <property name="set.test_image">0</property>
  </producer>
- <playlist id="playlist6">
-  <blank length="00:00:04.933"/>
-  <entry producer="producer6" in="00:00:00.000" out="00:00:14.767">
-   <property name="kdenlive:id">10</property>
+ <playlist id="playlist12">
+  <blank length="00:00:25.633"/>
+  <entry producer="producer16" in="00:00:00.000" out="00:00:04.967">
+   <property name="kdenlive:id">3</property>
   </entry>
-  <entry producer="producer6" in="00:00:00.000" out="00:00:14.767">
-   <property name="kdenlive:id">10</property>
+  <entry producer="producer16" in="00:00:00.000" out="00:00:04.967">
+   <property name="kdenlive:id">3</property>
+  </entry>
+  <entry producer="producer16" in="00:00:00.000" out="00:00:04.967">
+   <property name="kdenlive:id">3</property>
+  </entry>
+  <entry producer="producer16" in="00:00:00.000" out="00:00:04.967">
+   <property name="kdenlive:id">3</property>
+  </entry>
+  <entry producer="producer16" in="00:00:00.000" out="00:00:04.967">
+   <property name="kdenlive:id">3</property>
+  </entry>
+  <entry producer="producer8" in="00:00:00.000" out="00:00:03.000">
+   <property name="kdenlive:id">14</property>
+  </entry>
+  <entry producer="producer17" in="00:00:00.000" out="00:00:14.767">
+   <property name="kdenlive:id">11</property>
+  </entry>
+  <entry producer="producer17" in="00:00:00.000" out="00:00:14.767">
+   <property name="kdenlive:id">11</property>
   </entry>
  </playlist>
- <playlist id="playlist7"/>
- <tractor id="tractor3" in="00:00:00.000" out="00:00:34.500">
-  <property name="kdenlive:trackheight">69</property>
-  <property name="kdenlive:timeline_active">1</property>
-  <track producer="playlist6"/>
-  <track producer="playlist7"/>
- </tractor>
- <playlist id="playlist8"/>
- <playlist id="playlist9"/>
- <tractor id="tractor4" in="00:00:00.000">
-  <property name="kdenlive:trackheight">69</property>
-  <property name="kdenlive:timeline_active">1</property>
-  <track producer="playlist8"/>
-  <track producer="playlist9"/>
- </tractor>
- <playlist id="playlist10"/>
- <playlist id="playlist11"/>
- <tractor id="tractor5" in="00:00:00.000">
-  <property name="kdenlive:trackheight">69</property>
-  <property name="kdenlive:timeline_active">1</property>
-  <track producer="playlist10"/>
-  <track producer="playlist11"/>
- </tractor>
- <playlist id="playlist12"/>
  <playlist id="playlist13"/>
- <tractor id="tractor6" in="00:00:00.000">
+ <tractor id="tractor6" in="00:00:00.000" out="00:01:23.233">
   <property name="kdenlive:trackheight">69</property>
   <property name="kdenlive:timeline_active">1</property>
-  <track producer="playlist12"/>
-  <track producer="playlist13"/>
+  <property name="kdenlive:collapsed">0</property>
+  <property name="kdenlive:thumbs_format"/>
+  <property name="kdenlive:audio_rec"/>
+  <track hide="audio" producer="playlist12"/>
+  <track hide="audio" producer="playlist13"/>
  </tractor>
  <playlist id="playlist14"/>
  <playlist id="playlist15"/>
@@ -411,7 +1094,18 @@
   <track hide="audio" producer="playlist14"/>
   <track hide="audio" producer="playlist15"/>
  </tractor>
- <tractor id="tractor8" in="00:00:00.000" out="00:17:18.867">
+ <playlist id="playlist16"/>
+ <playlist id="playlist17"/>
+ <tractor id="tractor8" in="00:00:00.000">
+  <property name="kdenlive:trackheight">69</property>
+  <property name="kdenlive:timeline_active">1</property>
+  <property name="kdenlive:collapsed">0</property>
+  <property name="kdenlive:thumbs_format"/>
+  <property name="kdenlive:audio_rec"/>
+  <track hide="audio" producer="playlist16"/>
+  <track hide="audio" producer="playlist17"/>
+ </tractor>
+ <tractor id="tractor9" in="00:00:00.000" out="00:18:03.267">
   <track producer="black_track"/>
   <track producer="tractor0"/>
   <track producer="tractor1"/>
@@ -421,6 +1115,7 @@
   <track producer="tractor5"/>
   <track producer="tractor6"/>
   <track producer="tractor7"/>
+  <track producer="tractor8"/>
   <transition id="transition0">
    <property name="a_track">0</property>
    <property name="b_track">1</property>
@@ -441,11 +1136,75 @@
    <property name="accepts_blanks">1</property>
    <property name="sum">1</property>
   </transition>
-  <transition id="transition2" in="00:00:04.933" out="00:00:34.367">
+  <transition id="transition2" out="00:00:25.600">
    <property name="a_track">3</property>
-   <property name="b_track">4</property>
+   <property name="b_track">5</property>
    <property name="distort">0</property>
-   <property name="rect">00:00:00.000=160 107 480 320 1.000000</property>
+   <property name="rect">00:00:00.000=316 182 64 42 1.000000;00:00:05.167=273 207 67 44 1.000000;00:00:05.200=273 207 67 44 1.000000;00:00:10.800=381 220 70 46 1.000000;00:00:10.933=380 220 70 46 1.000000;00:00:17.667=289 245 74 49 1.000000;00:00:17.700=289 245 74 49 1.000000;00:00:25.600=353 249 80 53 1.000000</property>
+   <property name="fill">1</property>
+   <property name="mlt_service">affine</property>
+   <property name="kdenlive_id">affine</property>
+   <property name="rotate_x">00:00:00.000=0;00:00:05.167=0;00:00:05.200=0;00:00:10.800=0;00:00:10.933=0;00:00:17.667=0;00:00:17.700=0;00:00:25.600=0</property>
+   <property name="rotate_y">00:00:00.000=0;00:00:05.167=0;00:00:05.200=0;00:00:10.800=0;00:00:10.933=0;00:00:17.667=0;00:00:17.700=0;00:00:25.600=0</property>
+   <property name="rotate_z">00:00:00.000=-177.5;00:00:05.167=-151.102;00:00:05.200=-37.3;00:00:10.800=-39.8804;00:00:10.933=-170.5;00:00:17.667=-113.665;00:00:17.700=-51.2;00:00:25.600=-46.7</property>
+   <property name="keyed">1</property>
+   <property name="transition.repeat_off">1</property>
+   <property name="transition.mirror_off">1</property>
+   <property name="force_track">1</property>
+  </transition>
+  <transition id="transition3" in="00:00:25.633" out="00:01:23.233">
+   <property name="a_track">3</property>
+   <property name="b_track">5</property>
+   <property name="distort">0</property>
+   <property name="rect">00:00:00.000=340 252 80 53 1.000000;00:00:02.567=410 236 107 71 1.000000;00:00:02.600=407 238 107 71 1.000000;00:00:13.600=221 210 225 149 1.000000;00:00:13.633=220 209 225 149 1.000000;00:00:22.833=393 197 323 215 1.000000;00:00:22.867=391 196 323 215 1.000000;00:00:28.833=43 91 400 267 1.000000;00:00:28.867=43 91 400 267 1.000000;00:00:29.967=91 123 440 293 1.000000</property>
+   <property name="fill">1</property>
+   <property name="mlt_service">affine</property>
+   <property name="kdenlive_id">affine</property>
+   <property name="rotate_x">00:00:00.000=0;00:00:02.567=0;00:00:02.600=0;00:00:13.600=0;00:00:13.633=0;00:00:22.833=0;00:00:22.867=0;00:00:28.833=0;00:00:28.867=0;00:00:29.967=0</property>
+   <property name="rotate_y">00:00:00.000=0;00:00:02.567=0;00:00:02.600=0;00:00:13.600=0;00:00:13.633=0;00:00:22.833=0;00:00:22.867=0;00:00:28.833=0;00:00:28.867=0;00:00:29.967=0</property>
+   <property name="rotate_z">00:00:00.000=0;00:00:02.567=0;00:00:02.600=-164.8;00:00:13.600=-151.6;00:00:13.633=-36;00:00:22.833=-46.7;00:00:22.867=-129.5;00:00:28.833=-123.8;00:00:28.867=-36;00:00:29.967=-36</property>
+   <property name="keyed">1</property>
+   <property name="transition.repeat_off">1</property>
+   <property name="transition.mirror_off">1</property>
+   <property name="force_track">1</property>
+  </transition>
+  <transition id="transition4" in="00:00:29.633" out="00:00:52.700">
+   <property name="a_track">3</property>
+   <property name="b_track">6</property>
+   <property name="distort">0</property>
+   <property name="rect">00:00:00.000=442 281 40 26 1.000000;00:00:04.000=380 303 55 36 1.000000;00:00:08.833=285 296 80 53 1.000000;00:00:08.867=291 309 80 53 1.000000;00:00:14.400=507 321 104 69 1.000000;00:00:14.433=504 327 104 69 1.000000;00:00:18.700=161 330 128 85 1.000000;00:00:18.733=165 327 128 85 1.000000;00:00:22.933=413 373 160 106 1.000000</property>
+   <property name="fill">1</property>
+   <property name="mlt_service">affine</property>
+   <property name="kdenlive_id">affine</property>
+   <property name="force_track">1</property>
+   <property name="rotate_x">00:00:00.000=0;00:00:04.000=0;00:00:08.833=0;00:00:08.867=0;00:00:14.400=0;00:00:14.433=0;00:00:18.700=0;00:00:18.733=0;00:00:22.933=0</property>
+   <property name="rotate_y">00:00:00.000=0;00:00:04.000=0;00:00:08.833=0;00:00:08.867=0;00:00:14.400=0;00:00:14.433=0;00:00:18.700=0;00:00:18.733=0;00:00:22.933=0</property>
+   <property name="rotate_z">00:00:00.000=-161.7;00:00:04.000=-157.673;00:00:08.833=-151.6;00:00:08.867=-36;00:00:14.400=-46.7;00:00:14.433=-129.5;00:00:18.700=-146.5;00:00:18.733=-42.9;00:00:22.933=-41.7933</property>
+   <property name="keyed">1</property>
+   <property name="transition.repeat_off">1</property>
+   <property name="transition.mirror_off">1</property>
+  </transition>
+  <transition id="transition5" in="00:00:13.633" out="00:00:29.600">
+   <property name="a_track">3</property>
+   <property name="b_track">6</property>
+   <property name="distort">0</property>
+   <property name="rect">00:00:00.000=801 -1 40 26 1.000000;00:00:02.967=730 64 40 26 1.000000;00:00:07.400=628 137 40 26 1.000000;00:00:08.633=618 169 40 26 1.000000;00:00:11.733=545 224 40 26 1.000000;00:00:15.967=448 281 40 26 1.000000</property>
+   <property name="fill">1</property>
+   <property name="mlt_service">affine</property>
+   <property name="kdenlive_id">affine</property>
+   <property name="rotate_x">00:00:00.000=0;00:00:02.967=0;00:00:07.400=0;00:00:08.633=0;00:00:11.733=0;00:00:15.967=0</property>
+   <property name="rotate_y">00:00:00.000=0;00:00:02.967=0;00:00:07.400=0;00:00:08.633=0;00:00:11.733=0;00:00:15.967=0</property>
+   <property name="rotate_z">00:00:00.000=-178.7;00:00:02.967=-178.7;00:00:07.400=-178.7;00:00:08.633=-178.7;00:00:11.733=-178.7;00:00:15.967=-178.7</property>
+   <property name="keyed">1</property>
+   <property name="transition.repeat_off">1</property>
+   <property name="transition.mirror_off">1</property>
+   <property name="force_track">1</property>
+  </transition>
+  <transition id="transition6" in="00:00:52.733" out="00:01:23.233">
+   <property name="a_track">3</property>
+   <property name="b_track">6</property>
+   <property name="distort">0</property>
+   <property name="rect">00:00:00.000=439 376 160 106 1.000000</property>
    <property name="fill">1</property>
    <property name="mlt_service">affine</property>
    <property name="kdenlive_id">affine</property>
@@ -455,8 +1214,57 @@
    <property name="keyed">1</property>
    <property name="transition.repeat_off">1</property>
    <property name="transition.mirror_off">1</property>
+   <property name="force_track">1</property>
   </transition>
-  <transition id="transition3">
+  <transition id="transition7" in="00:00:25.633" out="00:00:50.600">
+   <property name="a_track">3</property>
+   <property name="b_track">7</property>
+   <property name="distort">0</property>
+   <property name="rect">00:00:00.000=368 249 80 53 1.000000;00:00:02.567=439 236 107 71 1.000000;00:00:02.600=380 238 107 71 1.000000;00:00:10.033=221 210 225 149 1.000000;00:00:10.067=220 209 225 149 1.000000;00:00:16.700=393 197 323 215 1.000000;00:00:16.767=391 196 323 215 1.000000;00:00:22.467=50 176 432 287 1.000000;00:00:22.500=51 175 432 287 1.000000;00:00:24.967=168 165 480 320 1.000000</property>
+   <property name="fill">1</property>
+   <property name="mlt_service">affine</property>
+   <property name="kdenlive_id">affine</property>
+   <property name="force_track">1</property>
+   <property name="rotate_x">00:00:00.000=0;00:00:02.567=0;00:00:02.600=0;00:00:10.033=0;00:00:10.067=0;00:00:16.700=0;00:00:16.767=0;00:00:22.467=0;00:00:22.500=0;00:00:24.967=0</property>
+   <property name="rotate_y">00:00:00.000=0;00:00:02.567=0;00:00:02.600=0;00:00:10.033=0;00:00:10.067=0;00:00:16.700=0;00:00:16.767=0;00:00:22.467=0;00:00:22.500=0;00:00:24.967=0</property>
+   <property name="rotate_z">00:00:00.000=0;00:00:02.567=0;00:00:02.600=-164.8;00:00:10.033=-151.6;00:00:10.067=-36;00:00:16.700=-46.7;00:00:16.767=-129.5;00:00:22.467=-146.5;00:00:22.500=-42.9;00:00:24.967=-36.6</property>
+   <property name="keyed">1</property>
+   <property name="transition.repeat_off">1</property>
+   <property name="transition.mirror_off">1</property>
+  </transition>
+  <transition id="transition8" in="00:00:50.633" out="00:00:53.633">
+   <property name="a_track">3</property>
+   <property name="b_track">7</property>
+   <property name="distort">0</property>
+   <property name="rect">00:00:00.000=148 167 480 320 1.000000</property>
+   <property name="fill">1</property>
+   <property name="mlt_service">affine</property>
+   <property name="kdenlive_id">affine</property>
+   <property name="rotate_x">00:00:00.000=0</property>
+   <property name="rotate_y">00:00:00.000=0</property>
+   <property name="rotate_z">00:00:00.000=0</property>
+   <property name="keyed">1</property>
+   <property name="transition.repeat_off">1</property>
+   <property name="transition.mirror_off">1</property>
+   <property name="force_track">1</property>
+  </transition>
+  <transition id="transition9" in="00:00:53.667" out="00:01:23.233">
+   <property name="a_track">3</property>
+   <property name="b_track">7</property>
+   <property name="distort">0</property>
+   <property name="rect">00:00:00.000=260 210 360 240 1.000000</property>
+   <property name="fill">1</property>
+   <property name="mlt_service">affine</property>
+   <property name="kdenlive_id">affine</property>
+   <property name="rotate_x">00:00:00.000=0</property>
+   <property name="rotate_y">00:00:00.000=0</property>
+   <property name="rotate_z">00:00:00.000=0</property>
+   <property name="keyed">1</property>
+   <property name="transition.repeat_off">1</property>
+   <property name="transition.mirror_off">1</property>
+   <property name="force_track">1</property>
+  </transition>
+  <transition id="transition10">
    <property name="a_track">0</property>
    <property name="b_track">3</property>
    <property name="version">0.9</property>
@@ -465,7 +1273,7 @@
    <property name="internal_added">237</property>
    <property name="always_active">1</property>
   </transition>
-  <transition id="transition4">
+  <transition id="transition11">
    <property name="a_track">0</property>
    <property name="b_track">4</property>
    <property name="version">0.9</property>
@@ -474,7 +1282,7 @@
    <property name="internal_added">237</property>
    <property name="always_active">1</property>
   </transition>
-  <transition id="transition5">
+  <transition id="transition12">
    <property name="a_track">0</property>
    <property name="b_track">5</property>
    <property name="version">0.9</property>
@@ -483,7 +1291,7 @@
    <property name="internal_added">237</property>
    <property name="always_active">1</property>
   </transition>
-  <transition id="transition6">
+  <transition id="transition13">
    <property name="a_track">0</property>
    <property name="b_track">6</property>
    <property name="version">0.9</property>
@@ -492,7 +1300,7 @@
    <property name="internal_added">237</property>
    <property name="always_active">1</property>
   </transition>
-  <transition id="transition7">
+  <transition id="transition14">
    <property name="a_track">0</property>
    <property name="b_track">7</property>
    <property name="version">0.9</property>
@@ -501,9 +1309,18 @@
    <property name="internal_added">237</property>
    <property name="always_active">1</property>
   </transition>
-  <transition id="transition8">
+  <transition id="transition15">
    <property name="a_track">0</property>
    <property name="b_track">8</property>
+   <property name="version">0.9</property>
+   <property name="mlt_service">frei0r.cairoblend</property>
+   <property name="kdenlive_id">frei0r.cairoblend</property>
+   <property name="internal_added">237</property>
+   <property name="always_active">1</property>
+  </transition>
+  <transition id="transition16">
+   <property name="a_track">0</property>
+   <property name="b_track">9</property>
    <property name="version">0.9</property>
    <property name="mlt_service">frei0r.cairoblend</property>
    <property name="kdenlive_id">frei0r.cairoblend</property>
