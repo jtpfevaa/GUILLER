@@ -6,7 +6,7 @@ IMGDIR=${1:-"photos"}
 echo "var imgSize = {" 
 
 # Procesa archivos .jpg y .png
-for f in $IMGDIR/*.jpg $IMGDIR/*.png; do
+for f in $IMGDIR/*.jpg $IMGDIR/*.png $IMGDIR/*.webp; do
   # Verifica que el archivo exista para evitar errores si no hay coincidencias
   [ -e "$f" ] || continue
   w=$(identify -format "%w" "$f")

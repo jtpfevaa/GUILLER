@@ -15,13 +15,14 @@ FONT_SIZE=20
 FONT="DejaVu-Sans"
 
 # Procesar todos los .png y .jpg
-for INPUT in $INDIR/*.png $INDIR/*.jpg; do
+for INPUT in $INDIR/*.png $INDIR/*.jpg $INDIR/*.webp; do
     [ -e "$INPUT" ] || continue  # Salta si no hay coincidencias
 
     # Nombre limpio
     BASENAME=$(basename "$INPUT")
     NAME_ONLY="${BASENAME%.*}"
-    OUTPUT="$OUTDIR/$BASENAME"
+#    OUTPUT="$OUTDIR/$BASENAME"
+    OUTPUT="$OUTDIR/${NAME_ONLY}.png"
 
     # Obtener dimensiones
     WIDTH=$(identify -format "%w" "$INPUT")
