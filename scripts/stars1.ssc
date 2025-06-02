@@ -18,24 +18,43 @@ LabelMgr.deleteAllLabels();
 useStatusLabel("MENSAJE: ", 50, core.getScreenHeight() - 50, 16, "#ff0000");
 
 var imgPath = "../textures/img/photos/";
-var constellations = new Array("Aquarius", "Pisces", "Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpius", "Sagittarius", "Capricornus");
+//var constellations = new Array("Aquarius", "Pisces", "Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpius", "Sagittarius", "Capricornus");
+
+// var constellations = [ "Acuario", "Piscis", "Aries", "Tau", "Géminis", "Cáncer", "Leo", "Virgo", "Libra", "Escorpio", "Sagitario", "Capricornio" ];
+
+var constellations = [ "Aqr", "Psc", "Ari", "Tau", "Gem", "Cnc", "Leo", "Vir", "Lib", "Sco", "Sgr", "Cap" ];
 
 var initial = {Planet: "Earth", Position: "Santurtzi", lon: 43, lat: -3};
 core.setSkyCulture("modern");
 core.clear("deepspace");
 core.wait(1);
 
+core.debug("SetLanguage: es");
+core.setAppLanguage("es");
+core.wait(0.5);  // espera breve para aplicar idioma
+
 core.setDate("2006:03:14T21:21:32");
 core.moveToRaDec("17h 53m 0s", "66d 25m 0s");
-StelMovementMgr.zoomTo(210, 5);
-core.wait(5);
+StelMovementMgr.zoomTo(210, 8);
+core.wait(10);
 
+core.debug("FlagIsolateSelected: true");
 ConstellationMgr.setFlagIsolateSelected(true);
+core.wait(4);
+core.debug("FlagArt: true");
 ConstellationMgr.setFlagArt(true);
-ConstellationMgr.setFlagLabels(true);
+core.wait(0.1);
+core.debug("Deselect constellations");
+ConstellationMgr.deselectConstellations();
+core.wait(4);
+core.debug("FlagLabels: false");
+ConstellationMgr.setFlagLabels(false);
+core.wait(4);
+core.debug("ArtIntensity:0.6");
 ConstellationMgr.setArtIntensity(0.6);
+core.wait(4);
 
-var saltar = false;
+var saltar = true;
 var timeTakeOff = 10;
 var timeLanding = 10;
 var timeViewConst = 10;
@@ -44,21 +63,19 @@ var timeZoomPlanet = 10;
 var timeViewPlanet = 5;
 var timeZoomConst = 10;
 var timeViewConst = 5;
-
-if(saltar == false) {			//saltar bloque
-var waitInterConst = 0.6;
-for(i=0; i<constellations.length; i++)
-{
-	core.selectObjectByName(constellations[i], false);
-	core.wait(waitInterConst);
-}
-
-}		// Fin salto
+var timeInterConst = 6;
 
 core.wait(1);
+core.debug("FlagBoundaries: true");
 ConstellationMgr.setFlagBoundaries(true);
-core.wait(1);
+core.wait(0.1);
+core.debug("Deselect constellations");
+ConstellationMgr.deselectConstellations();
+core.wait(4);
+core.debug("FlagEcliptic: true");
 GridLinesMgr.setFlagEclipticLine(true);
+core.wait(1);
+core.wait(4);
 
 // Iniciar desde la Tierra
 var planetas = [
@@ -79,15 +96,37 @@ var planetas = [
 
 core.setObserverLocation(initial.lon,initial.lat,4000,1,initial.Position,initial.Planet);
 
-ConstellationMgr.setFlagLines(true);
-ConstellationMgr.setFlagLabels(true);
+core.debug("FlagLines: false");
+ConstellationMgr.setFlagLines(false);
+core.wait(4);
+
+core.debug("Solar system Flags:");
 GridLinesMgr.setFlagEclipticLine(true);
 //GridLinesMgr.setFlagEquatorLine(true);
 SolarSystem.setFlagPlanets(true);
 SolarSystem.setFlagOrbits(true);
 SolarSystem.setFlagPointer(true);
 SolarSystem.setFlagLabels(true);
+core.wait(4);
 NebulaMgr.setDesignationUsage(true);
+
+ConstellationMgr.setFlagArt(true);
+core.wait(2);
+if(saltar) {			//saltar bloque
+	var waitInterConst = 2;
+	for(i=0; i<constellations.length; i++) {
+//		ConstellationMgr.deselectConstellations();
+		core.debug("RECORRIENDO: " + constellations[i]);
+		var success =core.selectObjectByName(constellations[i], false);
+		core.wait(waitInterConst);
+		if (success) {
+		    core.debug("✅ Seleccionable: " + constellations[i]);
+		} else {
+		    core.debug("❌ No reconocida: " + constellations[i]);
+		}
+	}
+
+}		// Fin salto
 
 StarMgr.setFlagLabels(true);
 StarMgr.setFlagStars(true);
@@ -173,16 +212,17 @@ function visitConst(planet)
 	if(planet.constInx != null ) {
 	var stars = starsInx[planet.constInx].stars;
 	var id;
-		for (var j = 0; j < stars.length; j++) {
+		for (var j = 0; j < stars.length; j++) {		// Browse The list of stars 
+			// Zoom in over star
 			zoomToObject( stars[j].name , stars[j].zoom , timeZoomConst , timeViewConst , stars[j].comm);
 
 			id = showImgObject(stars[j].name, stars[j].zoom , stars[j].img , 4+stars[j].time);
 
+			// Zoom Out over Constellation
 			StelMovementMgr.zoomTo(planet.zConst , 5); // Alejamiento suave en 5 segundos
 			core.wait(1);
 			core.removeSkyImage(id);
-//			id = showImgObject(stars[j].name, planet.zConst/5, stars[j].img);
-			core.wait(6);
+			core.wait(timeInterConst);
 		}
 	}
 }
@@ -193,6 +233,7 @@ function viajarA(inx) {
     core.setDate(planetas[inx].date,"utc");
     status("Buscando objeto " + planetas[inx].nombre );
     StelMovementMgr.zoomTo(200,1);
+    // Zoom to planet
     zoomToObject( planetas[inx].nombre , planetas[inx].zConst , timeZoomPlanet , timeViewPlanet, "VISITAR la constelación de " + constellations[inx]);
 
     visitConst(planetas[inx]);

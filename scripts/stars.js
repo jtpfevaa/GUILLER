@@ -3,7 +3,7 @@ var starsAq= [
 	{ name: "NGC 7606" , time: 3.0 , zoom: 0.02 , comm: "Agujero negro", img: "NGC-7606"},
 	{ name: "NGC 7009" , time: 3.0 , zoom: 0.02 , comm: "Enana blanca similar al sol" , img: "NGC-7009"},
 	{ name: "NGC 7293", alias: "EL OJO DE DIOS" , time: 3.0 , zoom: 0.474 , comm: "Hélice. EL OJO DE DIOS" , img: "NGC-7293"},
-	{ name: "Skat", alias: "AQUARIDAS" , time: 3.0 , zoom: 0.662 , comm: "DELTA AQUARIDA", img: "SKAT"}
+	{ name: "Skat", alias: "AQUARIDAS" , time: 3.0 , zoom: 0.462 , comm: "DELTA AQUARIDA", img: "SKAT"}
 ];
 
 var starsPi= [
@@ -33,13 +33,13 @@ var starsGem = [
 	{ name: "Pollux" , time: 3.0 , zoom: 0.11 , comm: "Estrella gigante naranja. Ojo de Pollux", img: "Pollux"},
 	{ name: "Castor" , time: 3.0 , zoom: 0.05 , comm: "Sistema estelar compuesto con estrellas binarias", img: "Castor"},
 	{ name: "IC 443", alias: "Nebulosa la  MEDUSA" , time: 3.0 , zoom: 1.29 , comm: "NEBULOSA de la MEDUSA. Talón de Cástor", img: "IC-443"},
-	{ name: "NGC 2392", alias: "Nebulosa ESQUIMAL" , time: 3.0 , zoom: 0.02 , comm: "NEBULOSA ESQUIMAL. Enana blanca caliente y luminosa", img: "NGC-2392"}
+	{ name: "NGC 2392", alias: "Nebulosa ESQUIMAL" , time: 3.0 , zoom: 0.08 , comm: "NEBULOSA ESQUIMAL. Enana blanca caliente y luminosa", img: "NGC-2392"}
 ];
 
 var starsCan = [
 	{ name: "M 44", alias: "Cúmulo del PESEBRE" , time: 3.0 , zoom: 1.13 , comm: "Cúmulo del PESEBRE", img: "M-44"},
-	{ name: "NGC 2775" , time: 3.0 , zoom: 1.13 , comm: "Galaxia espiral", img: "NGC-2775"},
-	{ name: "M 67", alias: "PAC-MAN" , time: 3.0 , zoom: 0.688 , comm: "Cúmulo PAC-MAN. Más de 500 estrellas juntas", img: "M-67"}
+	{ name: "NGC 2775" , alias: "Galaxia espiral", time: 3.0 , zoom: 0.63 , comm: "Galaxia espiral", img: "NGC-2775"},
+	{ name: "M 67", alias: "PAC-MAN" , time: 3.0 , zoom: 0.488 , comm: "Cúmulo PAC-MAN. Más de 500 estrellas juntas", img: "M-67"}
 ];
 
 var starsLeo = [

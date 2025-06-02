@@ -1,5 +1,5 @@
 
-all: sizeImg.js
+all: clean allphotos
 
 allphotos:
 	make -C ../IMG-2 clean

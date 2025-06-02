@@ -2,47 +2,26 @@
 
 const fs = require('fs');
 const path = require('path');
-
 const { execSync } = require('child_process');
 
-// Función que construye imagen marco si falta original
-//
-function construirMarco({ targetPath, name, alias, font, fontSize }) {
-  const OUTPUT = targetPath;
-  const TEXT = alias ? `${name}: ${alias}` : name;
-  const TMP_ID = Date.now(); // Para evitar colisiones en tmp
+const args = parseArgs(process.argv);
+// Parámetros con valores por defecto
+const inputFile = args.input || 'stars.js';
+const originRoot = args.origin || path.join(__dirname, 'ori');
+const targetRoot = args.target || '/usr/share/stellarium/textures/img/photos';
+const dryRun = !!args['dry-run'];
+const copyInsteadOfLink = !!args.copy;
 
-  const TEMP_INPUT = `/tmp/empty-${TMP_ID}.png`;
-  const WIDTH = 400, HEIGHT = 400;
-  const MARGIN = 15, HEADER = 15;
+const FONT = "DejaVu-Sans";
+const FONTSIZE = 20;
 
-  // Crear un PNG vacío como contenido de relleno
-  execSync(`convert -size ${WIDTH}x${HEIGHT} xc:black "${TEMP_INPUT}"`);
+// Crear un PNG vacío como contenido de relleno
+const HEIGHT = 400;
+const WIDTH = 400;
+const TMP_ID = Date.now();
+const TEMP_INPUT = `/tmp/empty-${TMP_ID}.png`;
 
-  const NEW_WIDTH = WIDTH + 2 * MARGIN;
-  const NEW_HEIGHT = HEIGHT + 2 * MARGIN + HEADER;
-
-  // Construir comando final
-  const cmd = [
-    `convert -size ${NEW_WIDTH}x${NEW_HEIGHT} xc:white`,
-    font ? `-font "${font}"` : '',
-    `-pointsize ${fontSize || 32}`,
-    `-fill black`,
-    `-draw "text ${MARGIN},${HEADER + 10} '${TEXT}'"`,
-    `"${TEMP_INPUT}" -geometry +${MARGIN}+${HEADER+MARGIN} -composite`,
-    `"${OUTPUT}"`
-  ].join(' ');
-
-  try {
-    execSync(cmd);
-    console.log(`📸 Marco creado en: ${OUTPUT}`);
-    console.log(`📸 Comando: ${cmd}`);
-  } catch (err) {
-    console.error(`❌ Error al construir marco: ${err.message}`);
-  } finally {
-    fs.unlinkSync(TEMP_INPUT); // Limpieza del temporal
-  }
-}
+execSync(`convert -size ${WIDTH}x${HEIGHT} xc:black "${TEMP_INPUT}"`);
 
 // Función para parsear argumentos estilo --key value o --flag
 function parseArgs(argv) {
@@ -63,7 +42,52 @@ function parseArgs(argv) {
   return args;
 }
 
-const args = parseArgs(process.argv);
+// Función para obtener dimensiones imagen con ImageMagick identify
+function getImageDimensions(filePath) {
+  try {
+    const output = execSync(`identify -format "%w %h" "${filePath}"`).toString();
+    const [width, height] = output.trim().split(' ').map(Number);
+    return { width, height };
+  } catch (err) {
+    console.warn(`⚠️ No se pudieron obtener dimensiones de ${filePath}, usando 400x400 por defecto.`);
+    return { width: 400, height: 400 };
+  }
+}
+
+// Función que construye imagen marco si falta original
+//
+function construirMarcoImage({ originPath, outputPath, title, font, fontSize }) {
+  const { width, height } = getImageDimensions(originPath);
+
+  const MARGIN = 15, HEADER = 15;
+  const NEW_WIDTH = width + 2 * MARGIN;
+  const NEW_HEIGHT = height + 2 * MARGIN + HEADER;
+
+  console.log(`ORIGINPATH: ${originPath}`);
+  console.log(`OUTPUTPATH: ${outputPath}`);
+  // Construir comando final
+  const cmd = [
+    `convert -size ${NEW_WIDTH}x${NEW_HEIGHT} xc:white`,
+    font ? `-font "${font}"` : '',
+    `-pointsize ${fontSize || 32}`,
+    `-fill black`,
+    `-draw "text ${MARGIN},${HEADER + 10} '${title}'"`,
+    `"${originPath}" -geometry +${MARGIN}+${HEADER+MARGIN} -composite`,
+    `"${outputPath}"`
+  ].join(' ');
+  if (dryRun) {
+    console.log(`[SIMULACIÓN] Comando para marco imagen: ${cmd}`);
+    return;
+  }
+
+  try {
+    execSync(cmd);
+    console.log(`📸 Marco creado en: ${outputPath}`);
+    console.log(`📸 Comando: ${cmd}`);
+  } catch (err) {
+    console.error(`❌ Error al construir marco: ${err.message}`);
+  }
+}
 
 // Mostrar ayuda si se usa --help
 if (args.help) {
@@ -77,8 +101,7 @@ if (args.help) {
             Por defecto: stars.js
 
   --origin  Directorio base donde están las carpetas de las constelaciones.
-            Cada carpeta debe tener su subcarpeta 'photos/' con las imágenes.
-            Por defecto: ./photos
+            Cada carpeta debe tener su subcarpeta 'ori/' con las imágenes iniciales y 'photos/' con las imágenes construidas.
 
   --target  Directorio donde se crearán los hard links o copias.
             Por defecto: /usr/share/stellarium/textures/img/photos
@@ -98,13 +121,6 @@ if (args.help) {
 `);
   process.exit(0);
 }
-
-// Parámetros con valores por defecto
-const inputFile = args.input || 'stars.js';
-const originRoot = args.origin || path.join(__dirname, 'photos');
-const targetRoot = args.target || '/usr/share/stellarium/textures/img/photos';
-const dryRun = !!args['dry-run'];
-const copyInsteadOfLink = !!args.copy;
 
 // Asegurar que targetRoot existe y está limpio
 if (fs.existsSync(targetRoot)) {
@@ -138,56 +154,43 @@ let total = 0;
 let found = 0;
 let missing = 0;
 
-// Función para crear hard link o copiar
-function procesarImagen({ imgPath, constellation, star }) {
-
-    const fileName = `${star.img}.png`;
-    const targetPath = path.join(targetRoot, fileName);
-
-  if (fs.existsSync(targetPath)) {
-    console.log(`ℹ️ Ya existe: ${targetPath}`);
-    return;
-  }
-
-  if (dryRun) {
-    console.log(`🟡 [SIMULACIÓN] ${copyInsteadOfLink ? 'Copiaría' : 'Crearía link'} → ${targetPath}`);
-    return;
-  }
-
-  try {
-    if (copyInsteadOfLink) {
-      fs.copyFileSync(imgPath, targetPath);
-      console.log(`📋 Copiado: ${targetPath}`);
-    } else {
-      fs.linkSync(imgPath, targetPath);
-      console.log(`🔗 Link creado: ${targetPath}`);
-    }
-  } catch (err) {
-    console.error(`❌ Error con ${imgPath}: ${err.message}`);
-  }
-}
-
 // Recorrer constelaciones
 starsInx.forEach(({ constname, stars }) => {
+  const oriDir = path.join(originRoot, constname, 'ori');
   const photosDir = path.join(originRoot, constname, 'photos');
 
   stars.forEach(star => {
     total++;
     const imgFile = `${star.img}.png`;
-    const imgPath = path.join(photosDir, imgFile);
+    const oriPath = path.join(oriDir, imgFile);
+    const photosPath = path.join(photosDir, imgFile);
     const fileName = `${star.img}.png`;
     const targetPath = path.join(targetRoot, fileName);
+    const text= star.alias ? `${star.name}: ${star.alias}` : star.name;
 
-    if (fs.existsSync(imgPath)) {
+    console.log(`fileName: ${fileName}`);
+    console.log(`oriPath: ${oriPath}`);
+
+    if (fs.existsSync(oriPath)) {
       found++;
+      construirMarcoImage({originPath: oriPath, outputPath: targetPath, title: text, font: "DejaVu-Sans", fontSize: 20 });
+      if (!dryRun) {
+        console.log(`[SIMULACIÓN] Copiando fichero photo: ${photosPath}`);
+	if(fs.existsSync(photosPath)) {
+		fs.unlinkSync(photosPath);
+	}
+        fs.linkSync(targetPath, photosPath);
+      }
     } else {
       missing++;
-      console.warn(`⚠️ Imagen no encontrada: ${imgPath}`);
-      construirMarco({targetPath,name: star.name, alias: star.alias, font: "DejaVu-Sans",fontSize: 20});
+      console.warn(`⚠️ Imagen no encontrada: ${oriPath}`);
+
+      construirMarcoImage({ originPath: TEMP_INPUT, outputPath: targetPath, title: text, font: "DejaVu-Sans", fontSize: 20 }); 
     }
-    procesarImagen({ imgPath, constellation: constname, star });
   });
 });
+
+fs.unlinkSync(TEMP_INPUT); // Limpieza del temporal
 
 console.log(`\n📊 Resumen:
   Total de imágenes procesadas: ${total}
